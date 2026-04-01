@@ -1,10 +1,10 @@
 import { Text } from "@react-navigation/elements";
 import { View } from "react-native";
 
-export default function Home(){
+export default function Emergency(){
     return(
         <View>
-            <Text>Home</Text>
+            <Text>Emergency</Text>
         </View>
 
     )
