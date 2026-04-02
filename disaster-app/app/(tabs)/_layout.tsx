@@ -1,7 +1,12 @@
-import { Tabs } from 'expo-router';
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
-export default function TabLayout(){
+export default function TabLayout() {
     return(
-        <Tabs/>
+        <>
+            <StatusBar style="auto" />
+            <Stack screenOptions={{ headerShown: true }} />
+            
+        </>
     )
 }
