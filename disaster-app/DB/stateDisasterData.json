@@ -1,0 +1,1158 @@
+{
+  "India": {
+    "EQ": {
+      "Andhra Pradesh": {
+        "freq": 138,
+        "sev": 5.08
+      },
+      "Arunachal Pradesh": {
+        "freq": 138,
+        "sev": 5.37
+      },
+      "Assam": {
+        "freq": 137,
+        "sev": 5.28
+      },
+      "Bihar": {
+        "freq": 134,
+        "sev": 4.82
+      },
+      "Chhattisgarh": {
+        "freq": 136,
+        "sev": 5.38
+      },
+      "Goa": {
+        "freq": 133,
+        "sev": 5.09
+      },
+      "Gujarat": {
+        "freq": 135,
+        "sev": 3.75
+      },
+      "Haryana": {
+        "freq": 134,
+        "sev": 4.14
+      },
+      "Himachal Pradesh": {
+        "freq": 133,
+        "sev": 3.66
+      },
+      "Jharkhand": {
+        "freq": 136,
+        "sev": 5.02
+      },
+      "Karnataka": {
+        "freq": 135,
+        "sev": 5.15
+      },
+      "Kerala": {
+        "freq": 136,
+        "sev": 5.04
+      },
+      "Madhya Pradesh": {
+        "freq": 138,
+        "sev": 5.12
+      },
+      "Maharashtra": {
+        "freq": 134,
+        "sev": 4.21
+      },
+      "Manipur": {
+        "freq": 137,
+        "sev": 4.83
+      },
+      "Meghalaya": {
+        "freq": 133,
+        "sev": 3.63
+      },
+      "Mizoram": {
+        "freq": 134,
+        "sev": 4.49
+      },
+      "Nagaland": {
+        "freq": 137,
+        "sev": 5.3
+      },
+      "Odisha": {
+        "freq": 134,
+        "sev": 5.28
+      },
+      "Punjab": {
+        "freq": 137,
+        "sev": 3.67
+      },
+      "Rajasthan": {
+        "freq": 134,
+        "sev": 3.63
+      },
+      "Sikkim": {
+        "freq": 134,
+        "sev": 4.58
+      },
+      "Tamil Nadu": {
+        "freq": 134,
+        "sev": 5.34
+      },
+      "Telangana": {
+        "freq": 138,
+        "sev": 4.51
+      },
+      "Tripura": {
+        "freq": 134,
+        "sev": 5.08
+      },
+      "Uttar Pradesh": {
+        "freq": 138,
+        "sev": 3.94
+      },
+      "Uttarakhand": {
+        "freq": 133,
+        "sev": 4.73
+      },
+      "West Bengal": {
+        "freq": 133,
+        "sev": 4.0
+      },
+      "Delhi": {
+        "freq": 135,
+        "sev": 4.39
+      }
+    },
+    "CY": {
+      "Andhra Pradesh": {
+        "freq": 2158,
+        "sev": 41.15
+      },
+      "Arunachal Pradesh": {
+        "freq": 2157,
+        "sev": 49.01
+      },
+      "Assam": {
+        "freq": 2155,
+        "sev": 42.57
+      },
+      "Bihar": {
+        "freq": 2159,
+        "sev": 36.13
+      },
+      "Chhattisgarh": {
+        "freq": 2154,
+        "sev": 47.48
+      },
+      "Goa": {
+        "freq": 2155,
+        "sev": 35.39
+      },
+      "Gujarat": {
+        "freq": 2156,
+        "sev": 34.48
+      },
+      "Haryana": {
+        "freq": 2156,
+        "sev": 45.71
+      },
+      "Himachal Pradesh": {
+        "freq": 2159,
+        "sev": 47.66
+      },
+      "Jharkhand": {
+        "freq": 2155,
+        "sev": 43.8
+      },
+      "Karnataka": {
+        "freq": 2156,
+        "sev": 50.73
+      },
+      "Kerala": {
+        "freq": 2158,
+        "sev": 49.98
+      },
+      "Madhya Pradesh": {
+        "freq": 2159,
+        "sev": 37.68
+      },
+      "Maharashtra": {
+        "freq": 2154,
+        "sev": 36.99
+      },
+      "Manipur": {
+        "freq": 2157,
+        "sev": 37.84
+      },
+      "Meghalaya": {
+        "freq": 2156,
+        "sev": 40.33
+      },
+      "Mizoram": {
+        "freq": 2156,
+        "sev": 37.01
+      },
+      "Nagaland": {
+        "freq": 2158,
+        "sev": 49.79
+      },
+      "Odisha": {
+        "freq": 2156,
+        "sev": 39.19
+      },
+      "Punjab": {
+        "freq": 2156,
+        "sev": 42.15
+      },
+      "Rajasthan": {
+        "freq": 2158,
+        "sev": 45.6
+      },
+      "Sikkim": {
+        "freq": 2157,
+        "sev": 48.45
+      },
+      "Tamil Nadu": {
+        "freq": 2158,
+        "sev": 48.22
+      },
+      "Telangana": {
+        "freq": 2154,
+        "sev": 50.1
+      },
+      "Tripura": {
+        "freq": 2155,
+        "sev": 36.87
+      },
+      "Uttar Pradesh": {
+        "freq": 2156,
+        "sev": 38.35
+      },
+      "Uttarakhand": {
+        "freq": 2156,
+        "sev": 44.38
+      },
+      "West Bengal": {
+        "freq": 2155,
+        "sev": 39.45
+      },
+      "Delhi": {
+        "freq": 2159,
+        "sev": 46.47
+      }
+    },
+    "FL": {
+      "Andhra Pradesh": {
+        "freq": 14,
+        "sev": 0.38
+      },
+      "Arunachal Pradesh": {
+        "freq": 14,
+        "sev": 0.47
+      },
+      "Assam": {
+        "freq": 11,
+        "sev": 0.48
+      },
+      "Bihar": {
+        "freq": 13,
+        "sev": 0.35
+      },
+      "Chhattisgarh": {
+        "freq": 13,
+        "sev": 0.32
+      },
+      "Goa": {
+        "freq": 14,
+        "sev": 0.41
+      },
+      "Gujarat": {
+        "freq": 16,
+        "sev": 0.36
+      },
+      "Haryana": {
+        "freq": 15,
+        "sev": 0.43
+      },
+      "Himachal Pradesh": {
+        "freq": 12,
+        "sev": 0.43
+      },
+      "Jharkhand": {
+        "freq": 14,
+        "sev": 0.37
+      },
+      "Karnataka": {
+        "freq": 11,
+        "sev": 0.4
+      },
+      "Kerala": {
+        "freq": 14,
+        "sev": 0.42
+      },
+      "Madhya Pradesh": {
+        "freq": 12,
+        "sev": 0.4
+      },
+      "Maharashtra": {
+        "freq": 16,
+        "sev": 0.36
+      },
+      "Manipur": {
+        "freq": 11,
+        "sev": 0.34
+      },
+      "Meghalaya": {
+        "freq": 12,
+        "sev": 0.44
+      },
+      "Mizoram": {
+        "freq": 12,
+        "sev": 0.35
+      },
+      "Nagaland": {
+        "freq": 11,
+        "sev": 0.44
+      },
+      "Odisha": {
+        "freq": 12,
+        "sev": 0.4
+      },
+      "Punjab": {
+        "freq": 16,
+        "sev": 0.39
+      },
+      "Rajasthan": {
+        "freq": 16,
+        "sev": 0.38
+      },
+      "Sikkim": {
+        "freq": 15,
+        "sev": 0.4
+      },
+      "Tamil Nadu": {
+        "freq": 15,
+        "sev": 0.42
+      },
+      "Telangana": {
+        "freq": 14,
+        "sev": 0.44
+      },
+      "Tripura": {
+        "freq": 11,
+        "sev": 0.4
+      },
+      "Uttar Pradesh": {
+        "freq": 11,
+        "sev": 0.33
+      },
+      "Uttarakhand": {
+        "freq": 14,
+        "sev": 0.48
+      },
+      "West Bengal": {
+        "freq": 12,
+        "sev": 0.37
+      },
+      "Delhi": {
+        "freq": 16,
+        "sev": 0.38
+      }
+    },
+    "HW": {
+      "Andhra Pradesh": {
+        "freq": 6,
+        "sev": 0.12
+      },
+      "Arunachal Pradesh": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Assam": {
+        "freq": 5,
+        "sev": 0.13
+      },
+      "Bihar": {
+        "freq": 4,
+        "sev": 0.15
+      },
+      "Chhattisgarh": {
+        "freq": 7,
+        "sev": 0.15
+      },
+      "Goa": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Gujarat": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Haryana": {
+        "freq": 7,
+        "sev": 0.13
+      },
+      "Himachal Pradesh": {
+        "freq": 2,
+        "sev": 0.17
+      },
+      "Jharkhand": {
+        "freq": 2,
+        "sev": 0.18
+      },
+      "Karnataka": {
+        "freq": 5,
+        "sev": 0.14
+      },
+      "Kerala": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Madhya Pradesh": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "Maharashtra": {
+        "freq": 5,
+        "sev": 0.14
+      },
+      "Manipur": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Meghalaya": {
+        "freq": 7,
+        "sev": 0.15
+      },
+      "Mizoram": {
+        "freq": 3,
+        "sev": 0.14
+      },
+      "Nagaland": {
+        "freq": 2,
+        "sev": 0.16
+      },
+      "Odisha": {
+        "freq": 5,
+        "sev": 0.17
+      },
+      "Punjab": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Rajasthan": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Sikkim": {
+        "freq": 6,
+        "sev": 0.16
+      },
+      "Tamil Nadu": {
+        "freq": 6,
+        "sev": 0.16
+      },
+      "Telangana": {
+        "freq": 2,
+        "sev": 0.13
+      },
+      "Tripura": {
+        "freq": 5,
+        "sev": 0.17
+      },
+      "Uttar Pradesh": {
+        "freq": 2,
+        "sev": 0.13
+      },
+      "Uttarakhand": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "West Bengal": {
+        "freq": 7,
+        "sev": 0.18
+      },
+      "Delhi": {
+        "freq": 2,
+        "sev": 0.16
+      }
+    }
+  },
+  "Japan": {
+    "EQ": {
+      "Tokyo": {
+        "freq": 293,
+        "sev": 4.87
+      },
+      "Osaka": {
+        "freq": 296,
+        "sev": 5.27
+      },
+      "Hokkaido": {
+        "freq": 296,
+        "sev": 4.44
+      },
+      "Aichi": {
+        "freq": 291,
+        "sev": 3.66
+      },
+      "Fukuoka": {
+        "freq": 292,
+        "sev": 4.49
+      },
+      "Kyoto": {
+        "freq": 296,
+        "sev": 3.64
+      },
+      "Hyogo": {
+        "freq": 294,
+        "sev": 4.11
+      },
+      "Chiba": {
+        "freq": 291,
+        "sev": 3.65
+      },
+      "Saitama": {
+        "freq": 293,
+        "sev": 4.06
+      },
+      "Hiroshima": {
+        "freq": 294,
+        "sev": 4.6
+      },
+      "Miyagi": {
+        "freq": 294,
+        "sev": 4.2
+      },
+      "Niigata": {
+        "freq": 294,
+        "sev": 3.78
+      },
+      "Nagano": {
+        "freq": 293,
+        "sev": 3.74
+      },
+      "Shizuoka": {
+        "freq": 296,
+        "sev": 3.62
+      },
+      "Okayama": {
+        "freq": 291,
+        "sev": 4.7
+      },
+      "Kagoshima": {
+        "freq": 291,
+        "sev": 4.66
+      },
+      "Okinawa": {
+        "freq": 296,
+        "sev": 5.08
+      },
+      "Gunma": {
+        "freq": 296,
+        "sev": 4.12
+      },
+      "Tochigi": {
+        "freq": 291,
+        "sev": 4.21
+      },
+      "Ibaraki": {
+        "freq": 295,
+        "sev": 4.48
+      },
+      "Gifu": {
+        "freq": 295,
+        "sev": 4.23
+      },
+      "Yamaguchi": {
+        "freq": 293,
+        "sev": 5.01
+      },
+      "Ehime": {
+        "freq": 291,
+        "sev": 5.19
+      },
+      "Nagasaki": {
+        "freq": 295,
+        "sev": 4.98
+      },
+      "Kumamoto": {
+        "freq": 293,
+        "sev": 4.07
+      },
+      "Akita": {
+        "freq": 295,
+        "sev": 3.66
+      },
+      "Fukushima": {
+        "freq": 295,
+        "sev": 3.91
+      },
+      "Yamanashi": {
+        "freq": 292,
+        "sev": 4.02
+      },
+      "Toyama": {
+        "freq": 296,
+        "sev": 3.89
+      },
+      "Ishikawa": {
+        "freq": 292,
+        "sev": 4.24
+      },
+      "Fukui": {
+        "freq": 296,
+        "sev": 3.99
+      },
+      "Shiga": {
+        "freq": 291,
+        "sev": 4.44
+      },
+      "Nara": {
+        "freq": 294,
+        "sev": 4.3
+      },
+      "Wakayama": {
+        "freq": 296,
+        "sev": 5.03
+      },
+      "Tottori": {
+        "freq": 291,
+        "sev": 3.82
+      },
+      "Shimane": {
+        "freq": 296,
+        "sev": 4.6
+      },
+      "Kagawa": {
+        "freq": 292,
+        "sev": 4.27
+      },
+      "Tokushima": {
+        "freq": 294,
+        "sev": 3.81
+      },
+      "Kochi": {
+        "freq": 292,
+        "sev": 4.2
+      },
+      "Saga": {
+        "freq": 294,
+        "sev": 5.34
+      },
+      "Oita": {
+        "freq": 293,
+        "sev": 4.88
+      },
+      "Miyazaki": {
+        "freq": 292,
+        "sev": 4.94
+      }
+    },
+    "TY": {
+      "Tokyo": {
+        "freq": 5878,
+        "sev": 62.62
+      },
+      "Osaka": {
+        "freq": 5873,
+        "sev": 61.57
+      },
+      "Hokkaido": {
+        "freq": 5877,
+        "sev": 54.59
+      },
+      "Aichi": {
+        "freq": 5876,
+        "sev": 46.41
+      },
+      "Fukuoka": {
+        "freq": 5875,
+        "sev": 56.09
+      },
+      "Kyoto": {
+        "freq": 5876,
+        "sev": 43.81
+      },
+      "Hyogo": {
+        "freq": 5878,
+        "sev": 50.66
+      },
+      "Chiba": {
+        "freq": 5876,
+        "sev": 53.07
+      },
+      "Saitama": {
+        "freq": 5876,
+        "sev": 53.99
+      },
+      "Hiroshima": {
+        "freq": 5876,
+        "sev": 42.91
+      },
+      "Miyagi": {
+        "freq": 5877,
+        "sev": 43.18
+      },
+      "Niigata": {
+        "freq": 5876,
+        "sev": 59.7
+      },
+      "Nagano": {
+        "freq": 5876,
+        "sev": 50.05
+      },
+      "Shizuoka": {
+        "freq": 5874,
+        "sev": 60.83
+      },
+      "Okayama": {
+        "freq": 5875,
+        "sev": 57.71
+      },
+      "Kagoshima": {
+        "freq": 5877,
+        "sev": 47.91
+      },
+      "Okinawa": {
+        "freq": 5876,
+        "sev": 62.85
+      },
+      "Gunma": {
+        "freq": 5875,
+        "sev": 50.68
+      },
+      "Tochigi": {
+        "freq": 5874,
+        "sev": 59.32
+      },
+      "Ibaraki": {
+        "freq": 5877,
+        "sev": 62.22
+      },
+      "Gifu": {
+        "freq": 5873,
+        "sev": 46.84
+      },
+      "Yamaguchi": {
+        "freq": 5873,
+        "sev": 60.11
+      },
+      "Ehime": {
+        "freq": 5877,
+        "sev": 51.64
+      },
+      "Nagasaki": {
+        "freq": 5876,
+        "sev": 58.52
+      },
+      "Kumamoto": {
+        "freq": 5875,
+        "sev": 44.07
+      },
+      "Akita": {
+        "freq": 5873,
+        "sev": 63.8
+      },
+      "Fukushima": {
+        "freq": 5877,
+        "sev": 59.67
+      },
+      "Yamanashi": {
+        "freq": 5878,
+        "sev": 45.27
+      },
+      "Toyama": {
+        "freq": 5878,
+        "sev": 43.07
+      },
+      "Ishikawa": {
+        "freq": 5876,
+        "sev": 48.13
+      },
+      "Fukui": {
+        "freq": 5875,
+        "sev": 60.4
+      },
+      "Shiga": {
+        "freq": 5875,
+        "sev": 49.61
+      },
+      "Nara": {
+        "freq": 5875,
+        "sev": 47.06
+      },
+      "Wakayama": {
+        "freq": 5875,
+        "sev": 50.39
+      },
+      "Tottori": {
+        "freq": 5874,
+        "sev": 57.69
+      },
+      "Shimane": {
+        "freq": 5876,
+        "sev": 57.6
+      },
+      "Kagawa": {
+        "freq": 5878,
+        "sev": 60.91
+      },
+      "Tokushima": {
+        "freq": 5874,
+        "sev": 44.6
+      },
+      "Kochi": {
+        "freq": 5876,
+        "sev": 42.8
+      },
+      "Saga": {
+        "freq": 5876,
+        "sev": 63.69
+      },
+      "Oita": {
+        "freq": 5878,
+        "sev": 45.24
+      },
+      "Miyazaki": {
+        "freq": 5875,
+        "sev": 53.24
+      }
+    },
+    "FL": {
+      "Tokyo": {
+        "freq": 5,
+        "sev": 0.12
+      },
+      "Osaka": {
+        "freq": 2,
+        "sev": 0.15
+      },
+      "Hokkaido": {
+        "freq": 6,
+        "sev": 0.11
+      },
+      "Aichi": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Fukuoka": {
+        "freq": 4,
+        "sev": 0.13
+      },
+      "Kyoto": {
+        "freq": 5,
+        "sev": 0.13
+      },
+      "Hyogo": {
+        "freq": 3,
+        "sev": 0.14
+      },
+      "Chiba": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Saitama": {
+        "freq": 1,
+        "sev": 0.12
+      },
+      "Hiroshima": {
+        "freq": 3,
+        "sev": 0.15
+      },
+      "Miyagi": {
+        "freq": 6,
+        "sev": 0.16
+      },
+      "Niigata": {
+        "freq": 1,
+        "sev": 0.13
+      },
+      "Nagano": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "Shizuoka": {
+        "freq": 6,
+        "sev": 0.15
+      },
+      "Okayama": {
+        "freq": 3,
+        "sev": 0.14
+      },
+      "Kagoshima": {
+        "freq": 1,
+        "sev": 0.13
+      },
+      "Okinawa": {
+        "freq": 3,
+        "sev": 0.13
+      },
+      "Gunma": {
+        "freq": 6,
+        "sev": 0.12
+      },
+      "Tochigi": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Ibaraki": {
+        "freq": 1,
+        "sev": 0.14
+      },
+      "Gifu": {
+        "freq": 5,
+        "sev": 0.13
+      },
+      "Yamaguchi": {
+        "freq": 1,
+        "sev": 0.15
+      },
+      "Ehime": {
+        "freq": 3,
+        "sev": 0.11
+      },
+      "Nagasaki": {
+        "freq": 2,
+        "sev": 0.11
+      },
+      "Kumamoto": {
+        "freq": 6,
+        "sev": 0.12
+      },
+      "Akita": {
+        "freq": 4,
+        "sev": 0.13
+      },
+      "Fukushima": {
+        "freq": 5,
+        "sev": 0.15
+      },
+      "Yamanashi": {
+        "freq": 6,
+        "sev": 0.15
+      },
+      "Toyama": {
+        "freq": 6,
+        "sev": 0.14
+      },
+      "Ishikawa": {
+        "freq": 5,
+        "sev": 0.12
+      },
+      "Fukui": {
+        "freq": 3,
+        "sev": 0.13
+      },
+      "Shiga": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "Nara": {
+        "freq": 1,
+        "sev": 0.14
+      },
+      "Wakayama": {
+        "freq": 3,
+        "sev": 0.13
+      },
+      "Tottori": {
+        "freq": 4,
+        "sev": 0.11
+      },
+      "Shimane": {
+        "freq": 4,
+        "sev": 0.13
+      },
+      "Kagawa": {
+        "freq": 2,
+        "sev": 0.13
+      },
+      "Tokushima": {
+        "freq": 1,
+        "sev": 0.15
+      },
+      "Kochi": {
+        "freq": 1,
+        "sev": 0.13
+      },
+      "Saga": {
+        "freq": 2,
+        "sev": 0.12
+      },
+      "Oita": {
+        "freq": 3,
+        "sev": 0.13
+      },
+      "Miyazaki": {
+        "freq": 6,
+        "sev": 0.15
+      }
+    },
+    "HW": {
+      "Tokyo": {
+        "freq": 3,
+        "sev": 0.04
+      },
+      "Osaka": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Hokkaido": {
+        "freq": 5,
+        "sev": 0.03
+      },
+      "Aichi": {
+        "freq": 5,
+        "sev": 0.05
+      },
+      "Fukuoka": {
+        "freq": 1,
+        "sev": 0.04
+      },
+      "Kyoto": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Hyogo": {
+        "freq": 2,
+        "sev": 0.04
+      },
+      "Chiba": {
+        "freq": 1,
+        "sev": 0.03
+      },
+      "Saitama": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Hiroshima": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Miyagi": {
+        "freq": 0,
+        "sev": 0.03
+      },
+      "Niigata": {
+        "freq": 1,
+        "sev": 0.04
+      },
+      "Nagano": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Shizuoka": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Okayama": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Kagoshima": {
+        "freq": 1,
+        "sev": 0.03
+      },
+      "Okinawa": {
+        "freq": 3,
+        "sev": 0.04
+      },
+      "Gunma": {
+        "freq": 5,
+        "sev": 0.03
+      },
+      "Tochigi": {
+        "freq": 5,
+        "sev": 0.03
+      },
+      "Ibaraki": {
+        "freq": 4,
+        "sev": 0.03
+      },
+      "Gifu": {
+        "freq": 2,
+        "sev": 0.05
+      },
+      "Yamaguchi": {
+        "freq": 3,
+        "sev": 0.04
+      },
+      "Ehime": {
+        "freq": 5,
+        "sev": 0.04
+      },
+      "Nagasaki": {
+        "freq": 4,
+        "sev": 0.04
+      },
+      "Kumamoto": {
+        "freq": 1,
+        "sev": 0.04
+      },
+      "Akita": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Fukushima": {
+        "freq": 1,
+        "sev": 0.04
+      },
+      "Yamanashi": {
+        "freq": 4,
+        "sev": 0.05
+      },
+      "Toyama": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Ishikawa": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Fukui": {
+        "freq": 5,
+        "sev": 0.03
+      },
+      "Shiga": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Nara": {
+        "freq": 0,
+        "sev": 0.04
+      },
+      "Wakayama": {
+        "freq": 0,
+        "sev": 0.03
+      },
+      "Tottori": {
+        "freq": 2,
+        "sev": 0.04
+      },
+      "Shimane": {
+        "freq": 3,
+        "sev": 0.04
+      },
+      "Kagawa": {
+        "freq": 2,
+        "sev": 0.03
+      },
+      "Tokushima": {
+        "freq": 2,
+        "sev": 0.04
+      },
+      "Kochi": {
+        "freq": 4,
+        "sev": 0.04
+      },
+      "Saga": {
+        "freq": 2,
+        "sev": 0.04
+      },
+      "Oita": {
+        "freq": 4,
+        "sev": 0.04
+      },
+      "Miyazaki": {
+        "freq": 3,
+        "sev": 0.03
+      }
+    }
+  }
+}

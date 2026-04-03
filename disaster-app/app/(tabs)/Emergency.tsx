@@ -1,19 +1,19 @@
 import { useSetupStore } from "@/utils/setup";
+import * as Location from 'expo-location';
 import { router } from "expo-router";
-import React, { useState } from "react";
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-
+import React, { useEffect, useState } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function OnboardingScreen() {
   const { setIsSetuped } = useSetupStore();
   const [step, setStep] = useState(0);
   const { adults,  setAdults,  } = useSetupStore();
   const nextStep = () =>
-    setStep((prev) => Math.min(prev + 1, 2));
+    setStep((prev) => Math.min(prev + 1, 3));
 
   const prevStep = () =>
     setStep((prev) => Math.max(prev - 1, 0));
-
+  
   const steps = [
     <WelcomeStep onNext={nextStep} key="welcome" />,
 
@@ -24,7 +24,11 @@ export default function OnboardingScreen() {
       onBack={prevStep}
       key="form"
     />,
-
+    <LocationStep
+      onNext={nextStep}
+      onBack={prevStep}
+      key="location"
+    />,
     <FinishStep
       onDone={() => {setIsSetuped(); // ✅ keep your original function
         router.replace("/");
@@ -52,61 +56,43 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
 }
 
 function UserFormStep({
-  adults,
-  setAdults,
-  onBack,
-  onNext,
+adults, 
+setAdults, 
+onBack, 
+onNext, 
 }: {
   adults: string;
-  children: string;
   setAdults: (val: string) => void;
-  setChildren: (val: string) => void;
   onBack: () => void;
-  onNext: () => void;
-}) {
+  onNext: () => void; }){
+  const value = Number(adults) || 1;
+
+  const increase = () => {
+    if (value < 60) setAdults(String(value + 1));
+  };
+
+  const decrease = () => {
+    if (value > 1) setAdults(String(value - 1));
+  };
+
   return (
     <View style={styles.step}>
       <Text style={styles.title}>People around you</Text>
 
-      <TextInput
-        placeholder="How many adults?"
-        value={adults}
-        onChangeText={(val) => {
-        // remove non-numbers
-        let num = val.replace(/[^0-9]/g, "");
+      {/* Stepper */}
+      <View style={styles.stepper}>
+        <Button title="-" onPress={decrease} disabled={value <= 1} />
+        
+        <Text style={styles.count}>{value}</Text>
+        
+        <Button title="+" onPress={increase} disabled={value >= 60} />
+      </View>
 
-        // limit length (optional, prevents big numbers like 9999)
-        if (num.length > 2) return;
-
-        // convert to number
-        const n = Number(num);
-
-        // allow empty (so user can delete)
-        if (num === "") {
-          setAdults("");
-          return;
-        }
-
-        // restrict range 1–20
-        if (n >= 1 && n <= 20) {
-          setAdults(num);
-        }
-      }}
-        style={styles.input}
-        keyboardType="numeric"
-      />
-
-      <Button
-        title="Next"
-        onPress={onNext}
-        disabled={!adults || Number(adults) === 0}
-      />
-
+      <Button title="Next" onPress={onNext} />
       <Button title="Back" onPress={onBack} />
     </View>
   );
 }
-
 function FinishStep({
   onDone,
   onBack,
@@ -126,6 +112,68 @@ function FinishStep({
     </View>
   );
 }
+
+
+export const getState = async () => {
+  const { status } = await Location.requestForegroundPermissionsAsync();
+  if (status !== 'granted') return null;
+
+  const { coords } = await Location.getCurrentPositionAsync({});
+  const [addr] = await Location.reverseGeocodeAsync(coords);
+
+  return addr?.region || null; // ✅ state
+};
+
+
+function LocationStep({
+  onNext,
+  onBack,
+}: {
+  onNext: () => void;
+  onBack: () => void;
+}) {
+  const [state, setState] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== "granted") {
+        setLoading(false);
+        return;
+      }
+
+      const { coords } = await Location.getCurrentPositionAsync({});
+      const [addr] = await Location.reverseGeocodeAsync(coords);
+
+      setState(addr?.region || null);
+      setLoading(false);
+    })();
+  }, []);
+
+  return (
+    <View style={styles.step}>
+      <Text style={styles.title}>Location Access 📍</Text>
+
+      <Text style={styles.subtitle}>
+        We need your location to provide accurate emergency support.
+      </Text>
+
+      {loading ? (
+        <Text style={{ color: "#aaa" }}>Getting location...</Text>
+      ) : (
+        <Text style={{ color: "#7B68EE" }}>
+          State: {state || "Not available"}
+        </Text>
+      )}
+
+      <Button title="Next" onPress={onNext} disabled={!state} />
+      <Button title="Back" onPress={onBack} />
+    </View>
+  );
+}
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -145,12 +193,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#aaa",
   },
-  input: {
-    borderWidth: 1,
-    borderColor: "#7B68EE",
-    borderRadius: 10,
-    padding: 12,
-    color: "#fff",
-    backgroundColor: "#1A1A1A",
-  },
+  stepper: {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 20,
+},
+
+count: {
+  fontSize: 32,
+  color: "#fff",
+  fontWeight: "bold",
+},
 });
