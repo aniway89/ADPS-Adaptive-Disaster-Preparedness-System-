@@ -21,6 +21,9 @@ export default function HomeScreen() {
       <Link href="/Inventory" style={{ color: 'blue' }}>
         Go to Inventory
       </Link>
+      <Link href="/checklist" style={{ color: 'blue' }}>
+        Go to Checklist
+      </Link>
     </View>
   );
 }

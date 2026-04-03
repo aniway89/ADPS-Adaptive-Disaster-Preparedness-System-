@@ -5,15 +5,14 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 type SetupState = {
   isSetuped: boolean;
 
-  // ✅ separate variables (no object = no conflict)
   adults: number;
+  location: string;
 
-  // existing functions (UNCHANGED behavior)
   setIsSetuped: () => void;
   Exit: () => void;
 
-  // new setters
   setAdults: (val: number) => void;
+  setLocation: (value: string) => void;
 };
 
 export const useSetupStore = create(
@@ -23,13 +22,13 @@ export const useSetupStore = create(
 
       // ✅ flat state (safe for JSON)
       adults: 1,
+  location: "",
 
-      // ✅ KEEP AS YOU WANTED
       setIsSetuped: () => set({ isSetuped: true }),
       Exit: () => set({ isSetuped: false }),
 
-      // ✅ simple setters (no spreading, no nesting)
       setAdults: (val) => set({ adults: val }),
+      setLocation: (value) => set({ location: value }),
     }),
     {
       name: 'setup-storage',
@@ -44,6 +43,7 @@ export const useSetupStore = create(
       partialize: (state) => ({
         isSetuped: state.isSetuped,
         adults: state.adults,
+        location: state.location,
       }),
     }
   )

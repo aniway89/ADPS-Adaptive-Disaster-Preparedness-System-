@@ -1,0 +1,74 @@
+[
+  {
+    "id": "water_1",
+    "category": "Water & Hydration",
+    "item": "Potable Water",
+    "quantity_per_person_day": "1 Gallon",
+    "priority": { "EQ": 1.0, "FL": 1.0, "CY": 1.0, "HW": 1.0 },
+    "EXP": "1-2 years",
+    "note": "Half for drinking, half for hygiene/cooling."
+  },
+  {
+    "id": "food_1",
+    "category": "Food & Nutrition",
+    "item": "High-Calorie Non-Perishables",
+    "quantity_per_person_day": "2000-2500 Cal",
+    "priority": { "EQ": 0.9, "FL": 0.8, "CY": 0.9, "HW": 0.3 },
+    "EXP": "1-5 years",
+    "note": "Equivalent to roughly 3-4 canned meals or bars."
+  },
+  {
+    "id": "med_1",
+    "category": "First Aid & Medicine",
+    "item": "First Aid Kit",
+    "quantity_per_person_day": "1 small kit",
+    "priority": { "EQ": 1.0, "FL": 0.9, "CY": 0.9, "HW": 0.2 },
+    "EXP": "3 years",
+    "note": "Includes sterile pads and antiseptic wipes."
+  },
+  {
+    "id": "med_2",
+    "category": "First Aid & Medicine",
+    "item": "Paracetamol / Ibuprofen",
+    "quantity_per_person_day": "4-6 tablets",
+    "priority": { "EQ": 0.9, "FL": 0.7, "CY": 0.7, "HW": 0.8 },
+    "EXP": "2 years",
+    "note": "Standard dosage for pain or fever relief."
+  },
+  {
+    "id": "med_3",
+    "category": "First Aid & Medicine",
+    "item": "ORS (Electrolyte Packets)",
+    "quantity_per_person_day": "2 packets",
+    "priority": { "EQ": 0.3, "FL": 0.7, "CY": 0.5, "HW": 1.0 },
+    "EXP": "2 years",
+    "note": "Essential for rehydration in heat or illness."
+  },
+  {
+    "id": "equip_1",
+    "category": "Equipment",
+    "item": "Flashlight & Batteries",
+    "quantity_per_person_day": "1 unit",
+    "priority": { "EQ": 0.9, "FL": 0.8, "CY": 0.9, "HW": 0.1 },
+    "EXP": "5 years",
+    "note": "LED types last longer on fewer batteries."
+  },
+  {
+    "id": "equip_2",
+    "category": "Equipment",
+    "item": "Whistle",
+    "quantity_per_person_day": "1 unit",
+    "priority": { "EQ": 1.0, "FL": 0.8, "CY": 0.6, "HW": 0.0 },
+    "EXP": "No expiry",
+    "note": "Individual signaling device."
+  },
+  {
+    "id": "equip_3",
+    "category": "Equipment",
+    "item": "N95 Dust Mask",
+    "quantity_per_person_day": "1 mask",
+    "priority": { "EQ": 1.0, "FL": 0.1, "CY": 0.2, "HW": 0.1 },
+    "EXP": "5 years",
+    "note": "Replace daily if used in heavy dust."
+  }
+]

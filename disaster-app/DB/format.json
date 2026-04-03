@@ -1,0 +1,86 @@
+[
+  {
+    "category": "Water and Food",
+    "item": "Potable Water (1 gal/person/day)",
+    "priority": { "EQ": 1.0, "FL": 1.0, "CY": 1.0, "HW": 1.0 },
+    "EXP": "1-2 years",
+    "note": "Critical for survival and cooling."
+  },
+  {
+    "category": "Water and Food",
+    "item": "High-Calorie Non-Perishables",
+    "priority": { "EQ": 0.9, "FL": 0.8, "CY": 0.9, "HW": 0.3 },
+    "EXP": "1-5 years",
+    "note": "Focus on dry goods; avoid salt in HW."
+  },
+  {
+    "category": "Medicine",
+    "item": "First Aid Kit (Bandages/Tape)",
+    "priority": { "EQ": 1.0, "FL": 0.9, "CY": 0.9, "HW": 0.2 },
+    "EXP": "3 years",
+    "note": "Essential for trauma/debris injuries."
+  },
+  {
+    "category": "Medicine",
+    "item": "Paracetamol / Ibuprofen",
+    "priority": { "EQ": 0.9, "FL": 0.7, "CY": 0.7, "HW": 0.8 },
+    "EXP": "2 years",
+    "note": "Treats injury pain and HW fevers."
+  },
+  {
+    "category": "Medicine",
+    "item": "ORS (Electrolyte Packets)",
+    "priority": { "EQ": 0.3, "FL": 0.7, "CY": 0.5, "HW": 1.0 },
+    "EXP": "2 years",
+    "note": "Prevents fatal HW dehydration."
+  },
+  {
+    "category": "Medicine",
+    "item": "Antibiotic Ointment",
+    "priority": { "EQ": 0.8, "FL": 0.9, "CY": 0.8, "HW": 0.1 },
+    "EXP": "1-2 years",
+    "note": "Prevents infection from dirty water (FL)."
+  },
+  {
+    "category": "Medicine",
+    "item": "Anti-Diarrheal Meds",
+    "priority": { "EQ": 0.2, "FL": 1.0, "CY": 0.8, "HW": 0.1 },
+    "EXP": "2 years",
+    "note": "Vital for water-borne diseases in FL."
+  },
+  {
+    "category": "Tools",
+    "item": "Battery/Hand-Crank Radio",
+    "priority": { "EQ": 0.9, "FL": 0.9, "CY": 1.0, "HW": 0.4 },
+    "EXP": "Check 6mo",
+    "note": "Primary source for emergency alerts."
+  },
+  {
+    "category": "Tools",
+    "item": "Whistle",
+    "priority": { "EQ": 1.0, "FL": 0.8, "CY": 0.6, "HW": 0.0 },
+    "EXP": "No expiry",
+    "note": "Signal rescuers if trapped (EQ)."
+  },
+  {
+    "category": "Tools",
+    "item": "Flashlight & Batteries",
+    "priority": { "EQ": 0.9, "FL": 0.8, "CY": 0.9, "HW": 0.1 },
+    "EXP": "5 years",
+    "note": "Needed for night evacuations."
+  },
+  {
+    "category": "Tools",
+    "item": "N95 Dust Mask",
+    "priority": { "EQ": 1.0, "FL": 0.1, "CY": 0.2, "HW": 0.1 },
+    "EXP": "5 years",
+    "note": "Filters toxic dust/rubble (EQ)."
+  },
+  {
+    "category": "Tools",
+    "item": "Waterproof Doc Pouch",
+    "priority": { "EQ": 0.4, "FL": 1.0, "CY": 0.9, "HW": 0.0 },
+    "EXP": "No expiry",
+    "note": "Protects IDs and insurance papers."
+  }
+]
