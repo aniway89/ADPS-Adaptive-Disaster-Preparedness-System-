@@ -1,0 +1,202 @@
+{
+  "India": {
+    "EQ": {
+      "Rest of India": {
+        "sev": 4.49800792303339,
+        "freq": 3534
+      },
+      "Punjab / Himachal": {
+        "sev": 4.411940298507463,
+        "freq": 134
+      },
+      "West Bengal / NE": {
+        "sev": 4.323404255319149,
+        "freq": 94
+      },
+      "Other": {
+        "sev": 4.428125,
+        "freq": 64
+      },
+      "Delhi": {
+        "sev": 4.09,
+        "freq": 20
+      },
+      "Chhattisgarh / Odisha": {
+        "sev": 4.4875,
+        "freq": 8
+      },
+      "Maharashtra": {
+        "sev": 4.242857142857143,
+        "freq": 7
+      },
+      "Gujarat": {
+        "sev": 4.166666666666667,
+        "freq": 3
+      },
+      "Karnataka": {
+        "sev": 4.4,
+        "freq": 2
+      },
+      "Telangana / Andhra": {
+        "sev": 4.75,
+        "freq": 2
+      }
+    },
+    "CY": {
+      "Rest of India": {
+        "sev": 40.68631319358816,
+        "freq": 35051
+      },
+      "Other": {
+        "sev": 44.956780717550906,
+        "freq": 12253
+      },
+      "Chhattisgarh / Odisha": {
+        "sev": 35.28671328671329,
+        "freq": 7868
+      },
+      "Telangana / Andhra": {
+        "sev": 44.81967213114754,
+        "freq": 2103
+      },
+      "Madhya Pradesh": {
+        "sev": 15.0,
+        "freq": 1736
+      },
+      "Gujarat": {
+        "sev": 30.533333333333335,
+        "freq": 816
+      },
+      "Tamil Nadu / Kerala": {
+        "sev": 30.275471698113208,
+        "freq": 666
+      },
+      "Delhi": {
+        "sev": 16.869565217391305,
+        "freq": 644
+      },
+      "Maharashtra": {
+        "sev": 27.470588235294116,
+        "freq": 566
+      },
+      "Karnataka": {
+        "sev": 27.96153846153846,
+        "freq": 380
+      },
+      "West Bengal / NE": {
+        "sev": 30.055555555555557,
+        "freq": 380
+      },
+      "Punjab / Himachal": {
+        "sev": 0.0,
+        "freq": 18
+      }
+    },
+    "FL": {
+      "freq": 333,
+      "sev": 0.4
+    },
+    "HW": {
+      "freq": 64,
+      "sev": 0.15
+    }
+  },
+  "Japan": {
+    "EQ": {
+      "Rest of Japan": {
+        "sev": 4.511868554448523,
+        "freq": 5721
+      },
+      "Other": {
+        "sev": 4.535391425908668,
+        "freq": 4292
+      },
+      "Tohoku": {
+        "sev": 4.495634379263302,
+        "freq": 1466
+      },
+      "Tokyo": {
+        "sev": 4.457427536231884,
+        "freq": 552
+      },
+      "Chubu": {
+        "sev": 4.427586206896551,
+        "freq": 87
+      },
+      "Hokkaido": {
+        "sev": 4.3428571428571425,
+        "freq": 70
+      },
+      "Osaka": {
+        "sev": 4.208333333333333,
+        "freq": 48
+      }
+    },
+    "TY": {
+      "Other": {
+        "sev": 53.48370820620767,
+        "freq": 234288
+      },
+      "Rest of Japan": {
+        "sev": 53.29198606271777,
+        "freq": 10206
+      },
+      "Rest of India": {
+        "sev": 43.45928338762215,
+        "freq": 907
+      },
+      "Tohoku": {
+        "sev": 47.70697674418604,
+        "freq": 461
+      },
+      "Tokyo": {
+        "sev": 54.92890995260664,
+        "freq": 338
+      },
+      "Chubu": {
+        "sev": 42.851063829787236,
+        "freq": 131
+      },
+      "Osaka": {
+        "sev": 46.61904761904762,
+        "freq": 103
+      },
+      "Hokkaido": {
+        "sev": 43.714285714285715,
+        "freq": 98
+      },
+      "Chhattisgarh / Odisha": {
+        "sev": 23.529411764705884,
+        "freq": 51
+      },
+      "Karnataka": {
+        "sev": 33.9,
+        "freq": 31
+      },
+      "Tamil Nadu / Kerala": {
+        "sev": 39.958333333333336,
+        "freq": 24
+      },
+      "Madhya Pradesh": {
+        "sev": 15.0,
+        "freq": 16
+      },
+      "Telangana / Andhra": {
+        "sev": 37.785714285714285,
+        "freq": 14
+      },
+      "Delhi": {
+        "sev": 15.0,
+        "freq": 9
+      }
+    },
+    "FL": {
+      "freq": 63,
+      "sev": 0.13
+    },
+    "HW": {
+      "freq": 18,
+      "sev": 0.04
+    }
+  }
+}

@@ -12,19 +12,24 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const {isSetuped} = useSetupStore(); // Replace with your actual setup check
+  const { isSetuped } = useSetupStore();
+
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      
+      {/* ✅ OUTSIDE Stack */}
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+
       <Stack>
-        <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
         <Stack.Protected guard={!isSetuped}>
           <Stack.Screen name="onboarding" options={{ headerShown: true }} />
         </Stack.Protected>
+
         <Stack.Protected guard={isSetuped}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack.Protected>
       </Stack>
-      <StatusBar style="auto" />
+
     </ThemeProvider>
   );
 }
