@@ -13,6 +13,8 @@ export default function OnboardingScreen() {
 
   const prevStep = () =>
     setStep((prev) => Math.max(prev - 1, 0));
+
+  
   
   const steps = [
     <WelcomeStep onNext={nextStep} key="welcome" />,
@@ -61,18 +63,18 @@ setAdults,
 onBack, 
 onNext, 
 }: {
-  adults: string;
-  setAdults: (val: string) => void;
+  adults: number;
+  setAdults: (val: number) => void;
   onBack: () => void;
   onNext: () => void; }){
-  const value = Number(adults) || 1;
+  const value = adults || 1;
 
   const increase = () => {
-    if (value < 60) setAdults(String(value + 1));
+    if (value < 60) setAdults(value + 1);
   };
 
   const decrease = () => {
-    if (value > 1) setAdults(String(value - 1));
+    if (value > 1) setAdults(value - 1);
   };
 
   return (
@@ -132,8 +134,9 @@ function LocationStep({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const [state, setState] = useState(null);
+  const [state, setState] = useState<string>("");
   const [loading, setLoading] = useState(true);
+  const { setLocation } = useSetupStore();
 
   useEffect(() => {
     (async () => {
@@ -146,10 +149,12 @@ function LocationStep({
       const { coords } = await Location.getCurrentPositionAsync({});
       const [addr] = await Location.reverseGeocodeAsync(coords);
 
-      setState(addr?.region || null); //getting error under line in this line
+      const region = addr?.region || "";
+      setState(region);
+      setLocation(region);
       setLoading(false);
     })();
-  }, []);
+  }, [setLocation]);
 
   return (
     <View style={styles.step}>

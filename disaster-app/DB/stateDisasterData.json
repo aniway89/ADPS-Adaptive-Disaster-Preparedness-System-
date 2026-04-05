@@ -1,5 +1,5 @@
 {
-  "India": {
+ 
     "EQ": {
       "Andhra Pradesh": {
         "freq": 138,
@@ -116,365 +116,7 @@
       "Delhi": {
         "freq": 135,
         "sev": 4.39
-      }
-    },
-    "CY": {
-      "Andhra Pradesh": {
-        "freq": 2158,
-        "sev": 41.15
       },
-      "Arunachal Pradesh": {
-        "freq": 2157,
-        "sev": 49.01
-      },
-      "Assam": {
-        "freq": 2155,
-        "sev": 42.57
-      },
-      "Bihar": {
-        "freq": 2159,
-        "sev": 36.13
-      },
-      "Chhattisgarh": {
-        "freq": 2154,
-        "sev": 47.48
-      },
-      "Goa": {
-        "freq": 2155,
-        "sev": 35.39
-      },
-      "Gujarat": {
-        "freq": 2156,
-        "sev": 34.48
-      },
-      "Haryana": {
-        "freq": 2156,
-        "sev": 45.71
-      },
-      "Himachal Pradesh": {
-        "freq": 2159,
-        "sev": 47.66
-      },
-      "Jharkhand": {
-        "freq": 2155,
-        "sev": 43.8
-      },
-      "Karnataka": {
-        "freq": 2156,
-        "sev": 50.73
-      },
-      "Kerala": {
-        "freq": 2158,
-        "sev": 49.98
-      },
-      "Madhya Pradesh": {
-        "freq": 2159,
-        "sev": 37.68
-      },
-      "Maharashtra": {
-        "freq": 2154,
-        "sev": 36.99
-      },
-      "Manipur": {
-        "freq": 2157,
-        "sev": 37.84
-      },
-      "Meghalaya": {
-        "freq": 2156,
-        "sev": 40.33
-      },
-      "Mizoram": {
-        "freq": 2156,
-        "sev": 37.01
-      },
-      "Nagaland": {
-        "freq": 2158,
-        "sev": 49.79
-      },
-      "Odisha": {
-        "freq": 2156,
-        "sev": 39.19
-      },
-      "Punjab": {
-        "freq": 2156,
-        "sev": 42.15
-      },
-      "Rajasthan": {
-        "freq": 2158,
-        "sev": 45.6
-      },
-      "Sikkim": {
-        "freq": 2157,
-        "sev": 48.45
-      },
-      "Tamil Nadu": {
-        "freq": 2158,
-        "sev": 48.22
-      },
-      "Telangana": {
-        "freq": 2154,
-        "sev": 50.1
-      },
-      "Tripura": {
-        "freq": 2155,
-        "sev": 36.87
-      },
-      "Uttar Pradesh": {
-        "freq": 2156,
-        "sev": 38.35
-      },
-      "Uttarakhand": {
-        "freq": 2156,
-        "sev": 44.38
-      },
-      "West Bengal": {
-        "freq": 2155,
-        "sev": 39.45
-      },
-      "Delhi": {
-        "freq": 2159,
-        "sev": 46.47
-      }
-    },
-    "FL": {
-      "Andhra Pradesh": {
-        "freq": 14,
-        "sev": 0.38
-      },
-      "Arunachal Pradesh": {
-        "freq": 14,
-        "sev": 0.47
-      },
-      "Assam": {
-        "freq": 11,
-        "sev": 0.48
-      },
-      "Bihar": {
-        "freq": 13,
-        "sev": 0.35
-      },
-      "Chhattisgarh": {
-        "freq": 13,
-        "sev": 0.32
-      },
-      "Goa": {
-        "freq": 14,
-        "sev": 0.41
-      },
-      "Gujarat": {
-        "freq": 16,
-        "sev": 0.36
-      },
-      "Haryana": {
-        "freq": 15,
-        "sev": 0.43
-      },
-      "Himachal Pradesh": {
-        "freq": 12,
-        "sev": 0.43
-      },
-      "Jharkhand": {
-        "freq": 14,
-        "sev": 0.37
-      },
-      "Karnataka": {
-        "freq": 11,
-        "sev": 0.4
-      },
-      "Kerala": {
-        "freq": 14,
-        "sev": 0.42
-      },
-      "Madhya Pradesh": {
-        "freq": 12,
-        "sev": 0.4
-      },
-      "Maharashtra": {
-        "freq": 16,
-        "sev": 0.36
-      },
-      "Manipur": {
-        "freq": 11,
-        "sev": 0.34
-      },
-      "Meghalaya": {
-        "freq": 12,
-        "sev": 0.44
-      },
-      "Mizoram": {
-        "freq": 12,
-        "sev": 0.35
-      },
-      "Nagaland": {
-        "freq": 11,
-        "sev": 0.44
-      },
-      "Odisha": {
-        "freq": 12,
-        "sev": 0.4
-      },
-      "Punjab": {
-        "freq": 16,
-        "sev": 0.39
-      },
-      "Rajasthan": {
-        "freq": 16,
-        "sev": 0.38
-      },
-      "Sikkim": {
-        "freq": 15,
-        "sev": 0.4
-      },
-      "Tamil Nadu": {
-        "freq": 15,
-        "sev": 0.42
-      },
-      "Telangana": {
-        "freq": 14,
-        "sev": 0.44
-      },
-      "Tripura": {
-        "freq": 11,
-        "sev": 0.4
-      },
-      "Uttar Pradesh": {
-        "freq": 11,
-        "sev": 0.33
-      },
-      "Uttarakhand": {
-        "freq": 14,
-        "sev": 0.48
-      },
-      "West Bengal": {
-        "freq": 12,
-        "sev": 0.37
-      },
-      "Delhi": {
-        "freq": 16,
-        "sev": 0.38
-      }
-    },
-    "HW": {
-      "Andhra Pradesh": {
-        "freq": 6,
-        "sev": 0.12
-      },
-      "Arunachal Pradesh": {
-        "freq": 3,
-        "sev": 0.17
-      },
-      "Assam": {
-        "freq": 5,
-        "sev": 0.13
-      },
-      "Bihar": {
-        "freq": 4,
-        "sev": 0.15
-      },
-      "Chhattisgarh": {
-        "freq": 7,
-        "sev": 0.15
-      },
-      "Goa": {
-        "freq": 3,
-        "sev": 0.17
-      },
-      "Gujarat": {
-        "freq": 2,
-        "sev": 0.14
-      },
-      "Haryana": {
-        "freq": 7,
-        "sev": 0.13
-      },
-      "Himachal Pradesh": {
-        "freq": 2,
-        "sev": 0.17
-      },
-      "Jharkhand": {
-        "freq": 2,
-        "sev": 0.18
-      },
-      "Karnataka": {
-        "freq": 5,
-        "sev": 0.14
-      },
-      "Kerala": {
-        "freq": 3,
-        "sev": 0.17
-      },
-      "Madhya Pradesh": {
-        "freq": 4,
-        "sev": 0.14
-      },
-      "Maharashtra": {
-        "freq": 5,
-        "sev": 0.14
-      },
-      "Manipur": {
-        "freq": 2,
-        "sev": 0.14
-      },
-      "Meghalaya": {
-        "freq": 7,
-        "sev": 0.15
-      },
-      "Mizoram": {
-        "freq": 3,
-        "sev": 0.14
-      },
-      "Nagaland": {
-        "freq": 2,
-        "sev": 0.16
-      },
-      "Odisha": {
-        "freq": 5,
-        "sev": 0.17
-      },
-      "Punjab": {
-        "freq": 3,
-        "sev": 0.17
-      },
-      "Rajasthan": {
-        "freq": 2,
-        "sev": 0.14
-      },
-      "Sikkim": {
-        "freq": 6,
-        "sev": 0.16
-      },
-      "Tamil Nadu": {
-        "freq": 6,
-        "sev": 0.16
-      },
-      "Telangana": {
-        "freq": 2,
-        "sev": 0.13
-      },
-      "Tripura": {
-        "freq": 5,
-        "sev": 0.17
-      },
-      "Uttar Pradesh": {
-        "freq": 2,
-        "sev": 0.13
-      },
-      "Uttarakhand": {
-        "freq": 4,
-        "sev": 0.14
-      },
-      "West Bengal": {
-        "freq": 7,
-        "sev": 0.18
-      },
-      "Delhi": {
-        "freq": 2,
-        "sev": 0.16
-      }
-    }
-  },
-  "Japan": {
-    "EQ": {
       "Tokyo": {
         "freq": 293,
         "sev": 4.87
@@ -643,8 +285,125 @@
         "freq": 292,
         "sev": 4.94
       }
+    
     },
-    "TY": {
+    "CY": {
+      "Andhra Pradesh": {
+        "freq": 2158,
+        "sev": 41.15
+      },
+      "Arunachal Pradesh": {
+        "freq": 2157,
+        "sev": 49.01
+      },
+      "Assam": {
+        "freq": 2155,
+        "sev": 42.57
+      },
+      "Bihar": {
+        "freq": 2159,
+        "sev": 36.13
+      },
+      "Chhattisgarh": {
+        "freq": 2154,
+        "sev": 47.48
+      },
+      "Goa": {
+        "freq": 2155,
+        "sev": 35.39
+      },
+      "Gujarat": {
+        "freq": 2156,
+        "sev": 34.48
+      },
+      "Haryana": {
+        "freq": 2156,
+        "sev": 45.71
+      },
+      "Himachal Pradesh": {
+        "freq": 2159,
+        "sev": 47.66
+      },
+      "Jharkhand": {
+        "freq": 2155,
+        "sev": 43.8
+      },
+      "Karnataka": {
+        "freq": 2156,
+        "sev": 50.73
+      },
+      "Kerala": {
+        "freq": 2158,
+        "sev": 49.98
+      },
+      "Madhya Pradesh": {
+        "freq": 2159,
+        "sev": 37.68
+      },
+      "Maharashtra": {
+        "freq": 2154,
+        "sev": 36.99
+      },
+      "Manipur": {
+        "freq": 2157,
+        "sev": 37.84
+      },
+      "Meghalaya": {
+        "freq": 2156,
+        "sev": 40.33
+      },
+      "Mizoram": {
+        "freq": 2156,
+        "sev": 37.01
+      },
+      "Nagaland": {
+        "freq": 2158,
+        "sev": 49.79
+      },
+      "Odisha": {
+        "freq": 2156,
+        "sev": 39.19
+      },
+      "Punjab": {
+        "freq": 2156,
+        "sev": 42.15
+      },
+      "Rajasthan": {
+        "freq": 2158,
+        "sev": 45.6
+      },
+      "Sikkim": {
+        "freq": 2157,
+        "sev": 48.45
+      },
+      "Tamil Nadu": {
+        "freq": 2158,
+        "sev": 48.22
+      },
+      "Telangana": {
+        "freq": 2154,
+        "sev": 50.1
+      },
+      "Tripura": {
+        "freq": 2155,
+        "sev": 36.87
+      },
+      "Uttar Pradesh": {
+        "freq": 2156,
+        "sev": 38.35
+      },
+      "Uttarakhand": {
+        "freq": 2156,
+        "sev": 44.38
+      },
+      "West Bengal": {
+        "freq": 2155,
+        "sev": 39.45
+      },
+      "Delhi": {
+        "freq": 2159,
+        "sev": 46.47
+      },
       "Tokyo": {
         "freq": 5878,
         "sev": 62.62
@@ -813,8 +572,126 @@
         "freq": 5875,
         "sev": 53.24
       }
+
+      
     },
     "FL": {
+      "Andhra Pradesh": {
+        "freq": 14,
+        "sev": 0.38
+      },
+      "Arunachal Pradesh": {
+        "freq": 14,
+        "sev": 0.47
+      },
+      "Assam": {
+        "freq": 11,
+        "sev": 0.48
+      },
+      "Bihar": {
+        "freq": 13,
+        "sev": 0.35
+      },
+      "Chhattisgarh": {
+        "freq": 13,
+        "sev": 0.32
+      },
+      "Goa": {
+        "freq": 14,
+        "sev": 0.41
+      },
+      "Gujarat": {
+        "freq": 16,
+        "sev": 0.36
+      },
+      "Haryana": {
+        "freq": 15,
+        "sev": 0.43
+      },
+      "Himachal Pradesh": {
+        "freq": 12,
+        "sev": 0.43
+      },
+      "Jharkhand": {
+        "freq": 14,
+        "sev": 0.37
+      },
+      "Karnataka": {
+        "freq": 11,
+        "sev": 0.4
+      },
+      "Kerala": {
+        "freq": 14,
+        "sev": 0.42
+      },
+      "Madhya Pradesh": {
+        "freq": 12,
+        "sev": 0.4
+      },
+      "Maharashtra": {
+        "freq": 16,
+        "sev": 0.36
+      },
+      "Manipur": {
+        "freq": 11,
+        "sev": 0.34
+      },
+      "Meghalaya": {
+        "freq": 12,
+        "sev": 0.44
+      },
+      "Mizoram": {
+        "freq": 12,
+        "sev": 0.35
+      },
+      "Nagaland": {
+        "freq": 11,
+        "sev": 0.44
+      },
+      "Odisha": {
+        "freq": 12,
+        "sev": 0.4
+      },
+      "Punjab": {
+        "freq": 16,
+        "sev": 0.39
+      },
+      "Rajasthan": {
+        "freq": 16,
+        "sev": 0.38
+      },
+      "Sikkim": {
+        "freq": 15,
+        "sev": 0.4
+      },
+      "Tamil Nadu": {
+        "freq": 15,
+        "sev": 0.42
+      },
+      "Telangana": {
+        "freq": 14,
+        "sev": 0.44
+      },
+      "Tripura": {
+        "freq": 11,
+        "sev": 0.4
+      },
+      "Uttar Pradesh": {
+        "freq": 11,
+        "sev": 0.33
+      },
+      "Uttarakhand": {
+        "freq": 14,
+        "sev": 0.48
+      },
+      "West Bengal": {
+        "freq": 12,
+        "sev": 0.37
+      },
+      "Delhi": {
+        "freq": 16,
+        "sev": 0.38
+      },
       "Tokyo": {
         "freq": 5,
         "sev": 0.12
@@ -983,8 +860,126 @@
         "freq": 6,
         "sev": 0.15
       }
+    
+    
     },
     "HW": {
+      "Andhra Pradesh": {
+        "freq": 6,
+        "sev": 0.12
+      },
+      "Arunachal Pradesh": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Assam": {
+        "freq": 5,
+        "sev": 0.13
+      },
+      "Bihar": {
+        "freq": 4,
+        "sev": 0.15
+      },
+      "Chhattisgarh": {
+        "freq": 7,
+        "sev": 0.15
+      },
+      "Goa": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Gujarat": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Haryana": {
+        "freq": 7,
+        "sev": 0.13
+      },
+      "Himachal Pradesh": {
+        "freq": 2,
+        "sev": 0.17
+      },
+      "Jharkhand": {
+        "freq": 2,
+        "sev": 0.18
+      },
+      "Karnataka": {
+        "freq": 5,
+        "sev": 0.14
+      },
+      "Kerala": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Madhya Pradesh": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "Maharashtra": {
+        "freq": 5,
+        "sev": 0.14
+      },
+      "Manipur": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Meghalaya": {
+        "freq": 7,
+        "sev": 0.15
+      },
+      "Mizoram": {
+        "freq": 3,
+        "sev": 0.14
+      },
+      "Nagaland": {
+        "freq": 2,
+        "sev": 0.16
+      },
+      "Odisha": {
+        "freq": 5,
+        "sev": 0.17
+      },
+      "Punjab": {
+        "freq": 3,
+        "sev": 0.17
+      },
+      "Rajasthan": {
+        "freq": 2,
+        "sev": 0.14
+      },
+      "Sikkim": {
+        "freq": 6,
+        "sev": 0.16
+      },
+      "Tamil Nadu": {
+        "freq": 6,
+        "sev": 0.16
+      },
+      "Telangana": {
+        "freq": 2,
+        "sev": 0.13
+      },
+      "Tripura": {
+        "freq": 5,
+        "sev": 0.17
+      },
+      "Uttar Pradesh": {
+        "freq": 2,
+        "sev": 0.13
+      },
+      "Uttarakhand": {
+        "freq": 4,
+        "sev": 0.14
+      },
+      "West Bengal": {
+        "freq": 7,
+        "sev": 0.18
+      },
+      "Delhi": {
+        "freq": 2,
+        "sev": 0.16
+      },
       "Tokyo": {
         "freq": 3,
         "sev": 0.04
@@ -1153,6 +1148,9 @@
         "freq": 3,
         "sev": 0.03
       }
+    
+    
     }
-  }
+ 
+  
 }

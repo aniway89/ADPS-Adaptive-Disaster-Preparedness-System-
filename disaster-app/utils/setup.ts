@@ -22,7 +22,7 @@ export const useSetupStore = create(
 
       // ✅ flat state (safe for JSON)
       adults: 1,
-  location: "",
+      location: "",
 
       setIsSetuped: () => set({ isSetuped: true }),
       Exit: () => set({ isSetuped: false }),
@@ -40,7 +40,7 @@ export const useSetupStore = create(
       })),
 
       // 🔥 EXTRA SAFETY (prevents future bugs)
-      partialize: (state) => ({
+      partialize: (state): Pick<SetupState, 'isSetuped' | 'adults' | 'location'> => ({
         isSetuped: state.isSetuped,
         adults: state.adults,
         location: state.location,
