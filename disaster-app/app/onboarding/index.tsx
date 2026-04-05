@@ -136,7 +136,7 @@ function LocationStep({
 }) {
   const [state, setState] = useState<string>("");
   const [loading, setLoading] = useState(true);
-  const { setLocation } = useSetupStore();
+  const { setLocation, setCoords } = useSetupStore();
 
   useEffect(() => {
     (async () => {
@@ -147,14 +147,21 @@ function LocationStep({
       }
 
       const { coords } = await Location.getCurrentPositionAsync({});
+      setCoords(coords.latitude, coords.longitude);
       const [addr] = await Location.reverseGeocodeAsync(coords);
 
-      const region = addr?.region || "";
-      setState(region);
-      setLocation(region);
+      const locationInfo = {
+        street: addr?.street || "",
+        district: addr?.district || "",
+        city: addr?.city || "",
+        region: addr?.region || "",
+      };
+      const displayLocation = `${locationInfo.street ? locationInfo.street + ", " : ""}${locationInfo.district ? locationInfo.district + ", " : ""}${locationInfo.city ? locationInfo.city + ", " : ""}${locationInfo.region}`;
+      setState(displayLocation);
+      setLocation(locationInfo);
       setLoading(false);
     })();
-  }, [setLocation]);
+  }, [setLocation, setCoords]);
 
   return (
     <View style={styles.step}>

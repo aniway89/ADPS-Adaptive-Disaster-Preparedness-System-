@@ -15,7 +15,7 @@ export default function RootLayout() {
   const { isSetuped } = useSetupStore();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
       
       {/* ✅ OUTSIDE Stack */}
       <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />

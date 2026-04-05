@@ -4,16 +4,17 @@ import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-nativ
 
 import Disaster from "../../DB/stateDisasterData.json";
 import supplies from "../../DB/supplies.json";
-const {location} = useSetupStore.getState();
+const {location, coords} = useSetupStore.getState();
 // ---------- Helper: compute top disaster ----------
-const getTopDisaster = (location: string) => {
+const getTopDisaster = (region: string) => {
   const entries = Object.entries(Disaster).map(([Type, data]) => ({
     Type,
-    value: (data[location]?.freq || 0) * (data[location]?.sev || 0),
+    value: (data[region]?.freq || 0) * (data[region]?.sev || 0),
   }));
   return entries.sort((a, b) => b.value - a.value)[0];
 };
-console.log("Disaster data loaded:", location);
+console.log("Disaster data loaded-----:", location.region,coords);
+console.log("Top disaster:", getTopDisaster(location.region));
 // ---------- Expiration formatting with slash (MM/YY) ----------
 const formatExpWithSlash = (rawDigits: string): string => {
   const digits = rawDigits.replace(/\D/g, "").slice(0, 4);
@@ -31,13 +32,17 @@ const formatExpWithSlash = (rawDigits: string): string => {
   return formatted;
 };
 
+
+
+
+
 // ---------- Main Component ----------
 export default function CheckList() {
   const { location, addItem } = useSetupStore();
 
   const [items, setItems] = useState<SupplyItem[]>([]);
 
-  const top = getTopDisaster(location);
+  const top = getTopDisaster(location.region);
 
   const mustHave = supplies.filter((i) => (i.priority?.[top.Type] || 0) > 0.7);
   const others = supplies.filter(
