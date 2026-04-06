@@ -1,0 +1,1 @@
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New%20Delhi%2C%20DL%2C%20IN?unitGroup=us&include=days%2Chours%2Ccurrent%2Calerts%2Cevents%2Cminutes&key=25RYY3PVTR4FTEMQT9R8P3NP5&contentType=json

@@ -4,17 +4,20 @@ import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-nativ
 
 import Disaster from "../../DB/stateDisasterData.json";
 import supplies from "../../DB/supplies.json";
-const {location} = useSetupStore.getState();
-// ---------- Helper: compute top disaster ----------
+
+// ---------- Helper: compute top disaster ----------import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+// Inside Inventory component
+
 const getTopDisaster = (region: string) => {
   const entries = Object.entries(Disaster).map(([Type, data]) => ({
     Type,
-    value: (data[location.region]?.freq || 0) * (data[location.region]?.sev || 0),
+    value: (data[region]?.freq || 0) * (data[region]?.sev || 0),
   }));
   return entries.sort((a, b) => b.value - a.value)[0];
 };
-console.log("Disaster data loaded-----:", location.region);
-console.log("Top disaster:", getTopDisaster(location.region));
+
 // ---------- Expiration formatting with slash (MM/YY) ----------
 const formatExpWithSlash = (rawDigits: string): string => {
   const digits = rawDigits.replace(/\D/g, "").slice(0, 4);
@@ -28,18 +31,12 @@ const formatExpWithSlash = (rawDigits: string): string => {
     else if (monthNum < 1) month = "01";
     else month = monthNum.toString().padStart(2, "0");
   }
-  const formatted = month + (year ? "/" + year : "");
-  return formatted;
+  return month + (year ? "/" + year : "");
 };
-
-
-
-
 
 // ---------- Main Component ----------
 export default function CheckList() {
   const { location, addItem } = useSetupStore();
-
   const [items, setItems] = useState<SupplyItem[]>([]);
 
   const top = getTopDisaster(location.region);
@@ -51,10 +48,11 @@ export default function CheckList() {
       (i.priority?.[top.Type] || 0) <= 0.7
   );
 
+  // Initialize temporary items (no storage yet)
   useEffect(() => {
     setItems([
       ...mustHave.map((i, idx) => ({
-        id: `m-${idx}`,
+        id: `temp-m-${idx}-${Date.now()}`, // slightly more unique, but will be replaced on save
         name: i.item,
         category: i.category,
         isMust: true,
@@ -64,7 +62,7 @@ export default function CheckList() {
         hasExp: i.hasExp ?? true,
       })),
       ...others.map((i, idx) => ({
-        id: `o-${idx}`,
+        id: `temp-o-${idx}-${Date.now()}`,
         name: i.item,
         category: i.category,
         isMust: false,
@@ -80,15 +78,12 @@ export default function CheckList() {
     setItems((prev) => prev.map((item) => (item.id === id ? { ...item, [key]: value } : item)));
   }, []);
 
-  // Handle expiration input: accept typed text, extract digits, reformat with slash
   const handleExpChange = (id: string, inputText: string) => {
-    // Remove any existing slashes and non-digits to get raw digits
     const rawDigits = inputText.replace(/\D/g, "");
     const formatted = formatExpWithSlash(rawDigits);
     updateItem(id, "exp", formatted);
   };
 
-  // Optional: validate on blur to ensure month is valid and pad
   const handleExpBlur = (id: string, currentExp: string) => {
     const digits = currentExp.replace(/\D/g, "");
     if (digits.length === 0) return;
@@ -100,7 +95,6 @@ export default function CheckList() {
       else if (monthNum < 1) month = "01";
       else month = monthNum.toString().padStart(2, "0");
     } else if (month.length === 1) {
-      // If only one digit, assume it's January (01)
       month = "01";
     }
     const year = digits.slice(2, 4);
@@ -108,11 +102,14 @@ export default function CheckList() {
     updateItem(id, "exp", formatted);
   };
 
+  // ✅ FIX: Generate a truly unique ID for each saved item
   const saveItems = useCallback(() => {
     const toSave = items.filter((item) => item.stock || item.isMust);
     toSave.forEach((item) => {
-      console.log("Saving item:", item);
-      addItem(item);
+      const uniqueId = `${item.name}-${Date.now()}-${Math.random().toString(36).substring(2, 10)}`;
+      const newItem = { ...item, id: uniqueId };
+      console.log("Saving item with unique ID:", newItem.id);
+      addItem(newItem);
     });
   }, [items, addItem]);
 
