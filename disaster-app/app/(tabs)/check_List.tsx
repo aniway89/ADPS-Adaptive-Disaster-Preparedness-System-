@@ -4,16 +4,16 @@ import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-nativ
 
 import Disaster from "../../DB/stateDisasterData.json";
 import supplies from "../../DB/supplies.json";
-const {location, coords} = useSetupStore.getState();
+const {location} = useSetupStore.getState();
 // ---------- Helper: compute top disaster ----------
 const getTopDisaster = (region: string) => {
   const entries = Object.entries(Disaster).map(([Type, data]) => ({
     Type,
-    value: (data[region]?.freq || 0) * (data[region]?.sev || 0),
+    value: (data[location.region]?.freq || 0) * (data[location.region]?.sev || 0),
   }));
   return entries.sort((a, b) => b.value - a.value)[0];
 };
-console.log("Disaster data loaded-----:", location.region,coords);
+console.log("Disaster data loaded-----:", location.region);
 console.log("Top disaster:", getTopDisaster(location.region));
 // ---------- Expiration formatting with slash (MM/YY) ----------
 const formatExpWithSlash = (rawDigits: string): string => {
