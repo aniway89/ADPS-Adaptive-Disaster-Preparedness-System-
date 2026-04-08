@@ -1,35 +1,49 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useSetupStore } from '@/utils/setup';
+import { StatusBar } from 'expo-status-bar';
+import { View } from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export const unstable_settings = {
   anchor: '(tabs)',
 };
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   const { isSetuped } = useSetupStore();
 
   return (
-    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#0f172a', textcolor: '#fff' }}>
       
-      {/* ✅ OUTSIDE Stack */}
-      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+      {/* ✅ Force dark status bar */}
+      <StatusBar style="light" />
 
-      <Stack>
-        <Stack.Protected guard={!isSetuped}>
-          <Stack.Screen name="onboarding" options={{ headerShown: true }} />
-        </Stack.Protected>
+      {/* ✅ Main container for consistent background */}
+      <View style={{ flex: 1, backgroundColor: '#0f172a' }}>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: '#0f172a' }, // ✅ applies to all screens
+          }}
+        >
+          <Stack.Protected guard={!isSetuped}>
+            <Stack.Screen 
+              name="onboarding" 
+              options={{ 
+                headerShown: true,
+                headerStyle: { backgroundColor: '#020617' },
+                headerTintColor: '#ffffff',
+              }} 
+            />
+          </Stack.Protected>
 
-        <Stack.Protected guard={isSetuped}>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        </Stack.Protected>
-      </Stack>
+          <Stack.Protected guard={isSetuped}>
+            <Stack.Screen name="(tabs)" />
+          </Stack.Protected>
+        </Stack>
+      </View>
 
-    </ThemeProvider>
+    </SafeAreaView>
   );
 }

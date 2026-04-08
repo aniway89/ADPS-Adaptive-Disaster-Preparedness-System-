@@ -19,27 +19,7 @@ export default function HomeScreen() {
     <View>
       <Text>Hello Home</Text>
 
-      {location && (
-        <Text>
-          Location: 
-          {location.district && `${location.district}, `}
-          {location.city && `${location.city}, `}
-          {location.region}
-        </Text>
-      )}
 
-      {weatherData && (
-        <View>
-          <Text>
-            Temperature: {Math.round(weatherData.weather.temp)}°C
-          </Text>          
-          <Text>Wind Speed: {weatherData.weather.wind} km/h</Text>
-          <Text>Humidity: {weatherData.weather.humidity}%</Text>
-          {weatherData.alerts.length > 0 && (
-            <Text>Warnings: {weatherData.alerts.join(', ')}</Text>
-          )}
-        </View>
-      )}
       
       {weatherData && <RiskCard data={weatherData} />}
       <Button

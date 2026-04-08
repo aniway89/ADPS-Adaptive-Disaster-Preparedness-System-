@@ -1,3 +1,4 @@
+import { useSetupStore } from "@/utils/setup";
 import React from "react";
 import { Text, View } from "react-native";
 
@@ -5,13 +6,20 @@ export const RiskCard = ({ data }: any) => {
   if (!data) return null;
 
   const { weather, risk, alerts } = data;
-
+    const { Exit, coords, location } = useSetupStore();
   return (
     <View style={{ padding: 12, backgroundColor: "#111", borderRadius: 10 }}>
       
       <Text style={{ color: "#fff", fontSize: 18, marginBottom: 8 }}>
         🌍 Risk Overview
       </Text>
+            {location && (
+        <Text>
+          Location: 
+          {location.district && `${location.district}, `}
+          {location.city && `${location.city}, `}
+        </Text>
+      )}
 
       <Text style={{ color: "#ccc" }}>
         🌡 Temp: {weather.temp}°C
