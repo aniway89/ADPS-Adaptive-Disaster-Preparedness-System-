@@ -13,13 +13,6 @@ export const RiskCard = ({ data }: any) => {
       <Text style={{ color: "#fff", fontSize: 18, marginBottom: 8 }}>
         🌍 Risk Overview
       </Text>
-            {location && (
-        <Text>
-          Location: 
-          {location.district && `${location.district}, `}
-          {location.city && `${location.city}, `}
-        </Text>
-      )}
 
       <Text style={{ color: "#ccc" }}>
         🌡 Temp: {weather.temp}°C

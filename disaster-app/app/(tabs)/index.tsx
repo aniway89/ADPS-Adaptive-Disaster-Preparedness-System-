@@ -1,42 +1,47 @@
-import { RiskCard } from '@/components/Riskcard';
+import RecentEventCard from '@/components/RecentEventCard';
+import WarningList from '@/components/WarningList';
+import WeatherCard from '@/components/WeatherCard';
 import { getDisasterAlerts } from '@/utils/Data';
 import { useSetupStore } from '@/utils/setup';
-import { Link } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { Button, Text, View } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 
 export default function HomeScreen() {
-  const { Exit, coords, location } = useSetupStore();
-  const [weatherData, setWeatherData] = useState<any>(null);
+  const { coords, location } = useSetupStore();
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    if (coords) {
-      getDisasterAlerts(coords.lat, coords.lon).then(setWeatherData);
-    }
+    if (!coords) return;
+
+    getDisasterAlerts(coords.lat, coords.lon)
+      .then(setData)
+      .catch(console.error);
   }, [coords]);
 
+  if (!data) return null;
+
   return (
-    <View>
-      <Text>Hello Home</Text>
+    <ScrollView
+      style={{ flex: 1, backgroundColor: "#0B0F1A", paddingTop: 50 }}
+      contentContainerStyle={{ padding: 16 }}
+    >
+      <StatusBar style="light" />
 
+      {/* LOCATION */}
+      <Text style={{ color: "#aaa", marginBottom: 10 }}>
+        📍 {location?.city}, {location?.district}
+      </Text>
 
-      
-      {weatherData && <RiskCard data={weatherData} />}
-      <Button
-        title="Onboard Again"
-        onPress={Exit} // Reset setup state to show onboarding again
-      />
+      {/* WEATHER */}
+      <WeatherCard weather={data.weather} location={location} />
 
-      <Link href="/icons" style={{ color: 'blue' }}>
-        Go to icons
-      </Link>
+      {/* RECENT EVENT */}
+      <RecentEventCard alerts={data.alerts} />
 
-      <Link href="/Inventory" style={{ color: 'blue' }}>
-        Go to Inventory
-      </Link>
-      <Link href="/check_List" style={{ color: 'blue' }}>
-        Go to Checklist
-      </Link>
-    </View>
+      {/* WARNINGS */}
+      <WarningList risk={data.risk} />
+
+    </ScrollView>
   );
 }

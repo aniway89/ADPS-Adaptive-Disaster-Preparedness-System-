@@ -1,10 +1,9 @@
 import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
-
+//onboarding
 export default function OnboardingLayout() {
     return(
         <>
-            <StatusBar style="auto" />
+  
             <Stack screenOptions={{ headerShown: false }} />
             
         </>

@@ -2,8 +2,8 @@ import { SupplyItem, useSetupStore } from "@/utils/setup";
 import React, { useCallback, useEffect, useState } from "react";
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-import Disaster from "../../DB/stateDisasterData.json";
-import supplies from "../../DB/supplies.json";
+import Disaster from "../DB/stateDisasterData.json";
+import supplies from "../DB/supplies.json";
 
 // ---------- Helper: compute top disaster ----------import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -143,7 +143,7 @@ export default function CheckList() {
   );
 
   return (
-    <ScrollView style={{ padding: 15, backgroundColor: "white" }}>
+    <ScrollView style={{ padding: 15,}}>
       <Text style={{ fontSize: 18, fontWeight: "bold" }}>Top disaster: {top.Type}</Text>
 
       <Text style={{ marginTop: 16, fontWeight: "600" }}>Must Have</Text>
