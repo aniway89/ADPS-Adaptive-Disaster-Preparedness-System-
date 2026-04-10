@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#0A0A0A",
+    backgroundColor: "#FFFFFF",
   },
   step: {
     gap: 20,
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    color: "#aaa",
+    color: "black",
   },
   stepper: {
   flexDirection: "row",
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
 
 count: {
   fontSize: 32,
-  color: "#fff",
+  color: "black",
   fontWeight: "bold",
 },
 });

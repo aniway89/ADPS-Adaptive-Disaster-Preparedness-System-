@@ -1,54 +1,82 @@
-import { useSetupStore } from "@/utils/setup";
+import { Ionicons } from "@expo/vector-icons";
+import Feather from '@expo/vector-icons/Feather';
 import React from "react";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export const RiskCard = ({ data }: any) => {
   if (!data) return null;
 
-  const { weather, risk, alerts } = data;
-    const { Exit, coords, location } = useSetupStore();
+  const { weather } = data;
+
+  // Format precipitation (assumed in mm, not km/h)
+  const rainValue = weather.rain !== undefined ? `${weather.rain} mm` : "—";
+
   return (
-    <View style={{ padding: 12, backgroundColor: "#111", borderRadius: 10 }}>
-      
-      <Text style={{ color: "#fff", fontSize: 18, marginBottom: 8 }}>
-        🌍 Risk Overview
-      </Text>
-
-      <Text style={{ color: "#ccc" }}>
-        🌡 Temp: {weather.temp}°C
-      </Text>
-      <Text style={{ color: "#ccc" }}>
-        💧 Humidity: {weather.humidity}%
-      </Text>
-      <Text style={{ color: "#ccc" }}>
-        🌧 Rain: {weather.rain} mm ({weather.rainProb}%)
-      </Text>
-      <Text style={{ color: "#ccc" }}>
-        🌬 Wind: {weather.wind} km/h
-      </Text>
-
-      <View style={{ marginTop: 10 }}>
-        <Text style={{ color: "#fff" }}>
-          Flood Risk: {risk.flood}%
-        </Text>
-        <Text style={{ color: "#fff" }}>
-          Storm Risk: {risk.storm}%
-        </Text>
-        <Text style={{ color: "#fff" }}>
-          Heat Risk: {risk.heat}%
-        </Text>
-        <Text style={{ color: "#fff" }}>
-          Earthquake Risk: {risk.earthquake}%
-        </Text>
-      </View>
-
-      {alerts.length > 0 && (
-        <View style={{ marginTop: 10 }}>
-          <Text style={{ color: "red" }}>
-            ⚠ Alerts: {alerts.join(", ")}
-          </Text>
+    <View style={styles.card}>
+      <View style={styles.row}>
+        {/* Humidity */}
+        <View style={styles.item}>
+          <Ionicons name="water" size={22} color="#3B82F6" />
+          <Text style={styles.value}>{weather.humidity}%</Text>
         </View>
-      )}
+
+        <View style={styles.divider} />
+
+        {/* Wind */}
+        <View style={styles.item}>
+          <Feather name="wind" size={22} color="#3B82F6" />
+          <Text style={styles.value}>{weather.wind} km/h</Text>
+        </View>
+
+        <View style={styles.divider} />
+
+        {/* Rain */}
+        <View style={styles.item}>
+          <Ionicons name="rainy" size={22} color="#3B82F6" />
+          <Text style={styles.value}>{rainValue}</Text>
+        </View>
+      </View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 20,
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    marginVertical: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 2,
+    borderWidth: 1,
+    borderColor: "#F0F0F0",
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  item: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingVertical: 6,
+    paddingHorizontal: 8,
+  },
+  value: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#1E293B",
+  },
+  divider: {
+    width: 1,
+    height: 24,
+    backgroundColor: "#E2E8F0",
+    marginHorizontal: 4,
+  },
+});

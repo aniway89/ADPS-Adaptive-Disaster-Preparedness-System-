@@ -35,7 +35,7 @@ export default function WarningList({ risk }: any) {
             </Text>
 
             <Text style={{ color: "#aaa", marginTop: 6 }}>
-              {w.value > 60 ? "High Risk" : "Moderate"}
+              {w.value > 60 ? "High Risk" : "Low"}
             </Text>
           </View>
         ))}

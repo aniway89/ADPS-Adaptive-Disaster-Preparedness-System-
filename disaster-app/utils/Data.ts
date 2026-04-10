@@ -27,6 +27,42 @@ const getDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => 
 };
 
 // ----------------------------------------------------------------------
+// Helper: Map WMO weather codes to human-readable strings
+// ----------------------------------------------------------------------
+const mapWeatherCodeToType = (code: number): string => {
+  // Based on https://open-meteo.com/en/docs
+  if (code === 0) return "Clear sky";
+  if (code === 1 || code === 2 || code === 3) return "Partly cloudy";
+  if (code === 45 || code === 48) return "Fog";
+  if (code === 51 || code === 53 || code === 55) return "Drizzle";
+  if (code === 56 || code === 57) return "Freezing drizzle";
+  if (code === 61 || code === 63 || code === 65) return "Rain";
+  if (code === 66 || code === 67) return "Freezing rain";
+  if (code === 71 || code === 73 || code === 75) return "Snow";
+  if (code === 77) return "Snow grains";
+  if (code === 80 || code === 81 || code === 82) return "Rain showers";
+  if (code === 85 || code === 86) return "Snow showers";
+  if (code === 95) return "Thunderstorm";
+  if (code === 96 || code === 99) return "Thunderstorm with hail";
+  return "Unknown";
+};
+
+// ----------------------------------------------------------------------
+// Helper: Fallback inference if weathercode is missing
+// ----------------------------------------------------------------------
+const inferWeatherType = (current: any): string => {
+  if (!current) return "Unknown";
+  const rain = current.precipitation ?? 0;
+  const wind = current.wind_speed_10m ?? 0;
+  const temp = current.temperature_2m ?? 20;
+  if (rain > 0) return "Rainy";
+  if (wind > 30) return "Windy";
+  if (temp > 30) return "Hot";
+  if (temp < 0) return "Freezing";
+  return "Clear";
+};
+
+// ----------------------------------------------------------------------
 // Helper: Cached NASA EONET (TTL = 10 minutes) using AsyncStorage
 // ----------------------------------------------------------------------
 const CACHE_KEY = '@eonet_cache';
@@ -62,7 +98,7 @@ export const getDisasterAlerts = async (lat: number, lon: number) => {
     // 1. Run all three independent data sources in parallel
     const [weatherPromise, eqPromise, eonetData] = await Promise.allSettled([
       fetchWithTimeout(
-        `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m,precipitation,precipitation_probability,relative_humidity_2m&alerts=true`
+        `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,wind_speed_10m,precipitation,precipitation_probability,relative_humidity_2m,weathercode&alerts=true`
       ),
       fetchWithTimeout(
         `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&latitude=${lat}&longitude=${lon}&maxradiuskm=500&limit=5`
@@ -74,9 +110,20 @@ export const getDisasterAlerts = async (lat: number, lon: number) => {
     // 2. Parse WEATHER (with fallbacks)
     // -------------------------
     let weather = null;
+    let weatherType = "Unknown"; // default
+
     if (weatherPromise.status === 'fulfilled') {
       try {
         weather = await weatherPromise.value.json();
+
+        // Determine current weather type
+        const code = weather?.current?.weathercode;
+        if (code !== undefined) {
+          weatherType = mapWeatherCodeToType(code);
+        } else {
+          // fallback inference
+          weatherType = inferWeatherType(weather?.current);
+        }
       } catch (e) {
         console.warn('Weather JSON parse error', e);
       }
@@ -197,11 +244,11 @@ export const getDisasterAlerts = async (lat: number, lon: number) => {
     }
 
     // -------------------------
-    // 7. FINAL RETURN
+    // 7. FINAL RETURN (includes weatherType)
     // -------------------------
     return {
       location: { lat, lon },
-      weather: { temp, wind, rain, rainProb, humidity },
+      weather: { temp, wind, rain, rainProb, humidity, weatherType },
       alerts,
       risk: {
         flood: floodRisk,
@@ -214,7 +261,7 @@ export const getDisasterAlerts = async (lat: number, lon: number) => {
     console.error('Disaster Engine Fatal Error:', err);
     return {
       location: { lat, lon },
-      weather: { temp: 20, wind: 0, rain: 0, rainProb: 0, humidity: 50 },
+      weather: { temp: 20, wind: 0, rain: 0, rainProb: 0, humidity: 50, weatherType: 'Unknown' },
       alerts: ['Unable to fetch disaster data'],
       risk: { flood: 0, storm: 0, heat: 0, earthquake: 0 },
     };
