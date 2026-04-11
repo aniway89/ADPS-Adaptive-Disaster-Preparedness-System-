@@ -1,0 +1,55 @@
+{
+  "survival_guide": {
+    "version": "1.0",
+    "last_updated": "2026-04-11",
+    "disasters": [
+      {
+        "type": "Flood",
+        "steps": [
+          "Move to the highest floor or ground possible immediately.",
+          "Do not walk, swim, or drive through moving water.",
+          "Turn off electricity and gas at the main switches if safe to do so.",
+          "Stay away from power lines and electrical equipment.",
+          "Drink only bottled or boiled water to avoid contamination."
+        ]
+      },
+      {
+        "type": "Earthquake",
+        "steps": [
+          "Drop, Cover, and Hold On under a sturdy table or desk.",
+          "Stay away from glass, windows, and heavy furniture that could fall.",
+          "If outdoors, move to an open area away from buildings and trees.",
+          "Do not use elevators; they may lose power or become stuck.",
+          "Be prepared for aftershocks which often follow the main quake."
+        ]
+      },
+      {
+        "type": "Storm",
+        "steps": [
+          "Seek shelter in a sturdy building or a basement.",
+          "Stay away from windows and glass doors.",
+          "Charge all communication devices before the storm hits.",
+          "Secure outdoor furniture and loose objects that could become projectiles.",
+          "Avoid using corded phones or touching electrical appliances."
+        ]
+      },
+      {
+        "type": "Heat Wave",
+        "steps": [
+          "Drink plenty of water even if you do not feel thirsty.",
+          "Stay in air-conditioned buildings or shaded areas.",
+          "Wear lightweight, light-colored, and loose-fitting clothing.",
+          "Never leave children or pets in a parked car.",
+          "Limit outdoor activity to early morning or late evening."
+        ]
+      }
+    ],
+    "emergency_kit_essentials": [
+      "Water (1 gallon per person per day)",
+      "Non-perishable food",
+      "Flashlight and extra batteries",
+      "First aid kit",
+      "Whistle to signal for help"
+    ]
+  }
+}

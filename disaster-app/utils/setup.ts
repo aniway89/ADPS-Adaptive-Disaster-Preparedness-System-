@@ -25,6 +25,7 @@ type SetupState = {
   location: LocationInfo;
   coords: { lat: number; lon: number } | null;
   items: SupplyItem[];
+  emergencyContact: string;                     // ✅ NEW
   setIsSetuped: () => void;
   Exit: () => void;
   setAdults: (val: number) => void;
@@ -33,6 +34,7 @@ type SetupState = {
   addItem: (item: SupplyItem) => void;
   removeItem: (id: string) => void;
   toggleItem: (id: string) => void;
+  setEmergencyContact: (num: string) => void;   // ✅ NEW
 };
 
 export const useSetupStore = create(
@@ -43,6 +45,7 @@ export const useSetupStore = create(
       location: {},
       coords: null,
       items: [],
+      emergencyContact: "",                      // ✅ initial value
       setIsSetuped: () => set({ isSetuped: true }),
       Exit: () => set({ isSetuped: false }),
       setAdults: (val) => set({ adults: val }),
@@ -53,16 +56,18 @@ export const useSetupStore = create(
       toggleItem: (id) => set((state) => ({
         items: state.items.map((i) => i.id === id ? { ...i, stock: !i.stock } : i)
       })),
+      setEmergencyContact: (num) => set({ emergencyContact: num }), // ✅ action
     }),
     {
       name: 'setup-storage',
-      storage: createJSONStorage(() => AsyncStorage),  // ✅ use AsyncStorage
+      storage: createJSONStorage(() => AsyncStorage),
       partialize: (state) => ({
         isSetuped: state.isSetuped,
         adults: state.adults,
         location: state.location,
         coords: state.coords,
         items: state.items,
+        emergencyContact: state.emergencyContact,   // ✅ persist this field
       }),
     }
   )
