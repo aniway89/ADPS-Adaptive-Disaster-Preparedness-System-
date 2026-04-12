@@ -1,9 +1,23 @@
+import { useLanguageStore } from "@/utils/languageStore";
 import { useSetupStore } from "@/utils/setup";
 import React, { useMemo } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Svg, { Circle } from "react-native-svg";
 import Disaster from "../DB/stateDisasterData.json";
 import supplies from "../DB/supplies.json";
+
+const translations = {
+  en: {
+    preparednessScore: "Preparedness Score",
+    forDisasterInRegion: "for {{disaster}} in {{region}}",
+    essentialsStocked: "{{count}} / {{total}} essentials stocked",
+  },
+  ja: {
+    preparednessScore: "準備状況スコア",
+    forDisasterInRegion: "{{region}}の{{disaster}}に対する",
+    essentialsStocked: "{{count}} / {{total}} 必須アイテムを備蓄",
+  },
+};
 
 const getTopDisaster = (region: string) => {
   const entries = Object.entries(Disaster).map(([type, data]) => ({
@@ -15,25 +29,24 @@ const getTopDisaster = (region: string) => {
 };
 
 const getEssentialItemsForDisaster = (disasterType: string) => {
-  return supplies.filter(
-    (item: any) => (item.priority?.[disasterType] || 0) > 0.7
-  );
+  return supplies.filter((item: any) => (item.priority?.[disasterType] || 0) > 0.7);
 };
 
 export default function PreparednessScore() {
-  const { location, items } = useSetupStore(); // ✅ always called
+  const { language } = useLanguageStore();
+  const t = (key: keyof typeof translations.en, params?: any) => {
+    let str = translations[language][key];
+    if (params) Object.keys(params).forEach(k => str = str.replace(`{{${k}}}`, params[k]));
+    return str;
+  };
+  const { location, items } = useSetupStore();
   const region = location.region || "unknown";
 
   const topDisaster = useMemo(() => getTopDisaster(region), [region]);
-  const essentialItems = useMemo(
-    () => getEssentialItemsForDisaster(topDisaster),
-    [topDisaster]
-  );
+  const essentialItems = useMemo(() => getEssentialItemsForDisaster(topDisaster), [topDisaster]);
 
   const stockedEssentialCount = useMemo(() => {
-    const stockedItemNames = new Set(
-      items.filter((i) => i.stock).map((i) => i.name)
-    );
+    const stockedItemNames = new Set(items.filter((i) => i.stock).map((i) => i.name));
     return essentialItems.filter((item) => stockedItemNames.has(item.item)).length;
   }, [items, essentialItems]);
 
@@ -46,7 +59,7 @@ export default function PreparednessScore() {
     return "#10B981";
   };
 
-  const size = 80; // smaller circle for horizontal layout
+  const size = 80;
   const strokeWidth = 8;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -54,54 +67,29 @@ export default function PreparednessScore() {
 
   return (
     <View style={styles.card}>
-      {/* Left: Circular Progress */}
       <View style={styles.circleContainer}>
         <Svg width={size} height={size}>
-          <Circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            stroke="#E5E7EB"
-            strokeWidth={strokeWidth}
-            fill="none"
-          />
-          <Circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            stroke={getColor()}
-            strokeWidth={strokeWidth}
-            fill="none"
-            strokeDasharray={circumference}
-            strokeDashoffset={strokeDashoffset}
-            strokeLinecap="round"
-            transform={`rotate(-90, ${size / 2}, ${size / 2})`}
-          />
+          <Circle cx={size/2} cy={size/2} r={radius} stroke="#E5E7EB" strokeWidth={strokeWidth} fill="none" />
+          <Circle cx={size/2} cy={size/2} r={radius} stroke={getColor()} strokeWidth={strokeWidth} fill="none"
+            strokeDasharray={circumference} strokeDashoffset={strokeDashoffset} strokeLinecap="round"
+            transform={`rotate(-90, ${size/2}, ${size/2})`} />
         </Svg>
         <View style={styles.percentageContainer}>
-          <Text style={[styles.percentage, { color: getColor() }]}>
-            {Math.round(score)}%
-          </Text>
+          <Text style={[styles.percentage, { color: getColor() }]}>{Math.round(score)}%</Text>
         </View>
       </View>
-
-      {/* Right: Text Info */}
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>Preparedness Score</Text>
-        <Text style={styles.subtitle}>
-          for {topDisaster} in {region}
-        </Text>
+        <Text style={styles.title}>{t('preparednessScore')}</Text>
+        <Text style={styles.subtitle}>{t('forDisasterInRegion', { disaster: topDisaster, region })}</Text>
         <View style={styles.stats}>
-          <Text style={styles.statsText}>
-            {stockedEssentialCount} / {totalEssential} essentials stocked
-          </Text>
+          <Text style={styles.statsText}>{t('essentialsStocked', { count: stockedEssentialCount, total: totalEssential })}</Text>
         </View>
       </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
   card: {
     flexDirection: "row",          // horizontal row
     backgroundColor: "#FFFFFF",

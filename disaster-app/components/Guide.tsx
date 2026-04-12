@@ -2,12 +2,12 @@ import { SupplyItem, useSetupStore } from "@/utils/setup";
 import { FontAwesome6 } from "@expo/vector-icons";
 import React, { useCallback, useEffect, useState } from "react";
 import {
-    Modal,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Modal,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import Disaster from "../DB/stateDisasterData.json";
 import supplies from "../DB/supplies.json";
@@ -233,7 +233,7 @@ export default function CheckList() {
             style={{
               flexDirection: "row",
               alignItems: "center",
-              paddingVertical: 12,
+              paddingVertical: 0,
               paddingHorizontal: 12,
               backgroundColor: "#f0f4f8",
               borderRadius: 10,
@@ -257,11 +257,11 @@ export default function CheckList() {
           disabled={!hasSelection}
           onPress={saveItems}
           style={{
-            marginTop: 20,
+            marginTop: 16,
             backgroundColor: hasSelection ? "black" : "gray",
             padding: 12,
             borderRadius: 8,
-            marginBottom: 26,
+            marginBottom: 20,
           }}
         >
           <Text style={{ color: "white", textAlign: "center", fontWeight: "bold" }}>

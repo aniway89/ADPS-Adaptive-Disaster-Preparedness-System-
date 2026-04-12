@@ -8,7 +8,7 @@ import { useSetupStore } from '@/utils/setup';
 import { FontAwesome6 } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { Button, ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 
 export default function HomeScreen() {
   const { coords, location } = useSetupStore();
@@ -52,7 +52,7 @@ export default function HomeScreen() {
 
   return (
     <ScrollView
-      style={{ flex: 1, backgroundColor: "#FFFFFF", paddingTop: 30 }}
+      style={{ flex: 1, backgroundColor: "#FFFFFF", paddingTop: 50 }}
       contentContainerStyle={{ padding: 12 }}
     >
       <StatusBar style="light" />
@@ -77,7 +77,7 @@ export default function HomeScreen() {
 
       {/* ✅ DISASTER ROWS (with icons and survival modal) */}
       <DisasterList />
-       <Button title="Exit" onPress={Exit} />
+  
       <PreparednessScore />
     </ScrollView>
   );

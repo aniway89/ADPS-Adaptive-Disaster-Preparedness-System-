@@ -10,6 +10,8 @@ export type SupplyItem = {
   stock: boolean;
   category: string;
   isMust: boolean;
+  hasExp?: boolean;
+  isCustom?: boolean;
 };
 
 type LocationInfo = {
@@ -25,7 +27,8 @@ type SetupState = {
   location: LocationInfo;
   coords: { lat: number; lon: number } | null;
   items: SupplyItem[];
-  emergencyContact: string;                     // ✅ NEW
+  emergencyContact: string;
+  country: string;                     // NEW: ISO country code (e.g., "IN", "US")
   setIsSetuped: () => void;
   Exit: () => void;
   setAdults: (val: number) => void;
@@ -34,7 +37,8 @@ type SetupState = {
   addItem: (item: SupplyItem) => void;
   removeItem: (id: string) => void;
   toggleItem: (id: string) => void;
-  setEmergencyContact: (num: string) => void;   // ✅ NEW
+  setEmergencyContact: (num: string) => void;
+  setCountry: (code: string) => void;  // NEW
 };
 
 export const useSetupStore = create(
@@ -45,18 +49,20 @@ export const useSetupStore = create(
       location: {},
       coords: null,
       items: [],
-      emergencyContact: "",                      // ✅ initial value
+      emergencyContact: "",
+      country: "IN",                   // default to India (change as needed)
       setIsSetuped: () => set({ isSetuped: true }),
       Exit: () => set({ isSetuped: false }),
       setAdults: (val) => set({ adults: val }),
       setLocation: (value) => set({ location: value }),
-      setCoords: (lat: number, lon: number) => set({ coords: { lat, lon } }),
+      setCoords: (lat, lon) => set({ coords: { lat, lon } }),
       addItem: (item) => set((state) => ({ items: [...state.items, item] })),
       removeItem: (id) => set((state) => ({ items: state.items.filter((i) => i.id !== id) })),
       toggleItem: (id) => set((state) => ({
         items: state.items.map((i) => i.id === id ? { ...i, stock: !i.stock } : i)
       })),
-      setEmergencyContact: (num) => set({ emergencyContact: num }), // ✅ action
+      setEmergencyContact: (num) => set({ emergencyContact: num }),
+      setCountry: (code) => set({ country: code.toUpperCase() }),
     }),
     {
       name: 'setup-storage',
@@ -67,7 +73,8 @@ export const useSetupStore = create(
         location: state.location,
         coords: state.coords,
         items: state.items,
-        emergencyContact: state.emergencyContact,   // ✅ persist this field
+        emergencyContact: state.emergencyContact,
+        country: state.country,
       }),
     }
   )

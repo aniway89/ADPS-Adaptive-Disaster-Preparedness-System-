@@ -1,6 +1,6 @@
 import { useLanguageStore } from "@/utils/languageStore";
 import { useSetupStore } from "@/utils/setup";
-import { FontAwesome6 } from "@expo/vector-icons";
+import { FontAwesome5, FontAwesome6 } from "@expo/vector-icons";
 import * as Location from 'expo-location';
 import { router } from "expo-router";
 import React, { useEffect, useState } from "react";
@@ -189,7 +189,7 @@ function WelcomeStep({ onNext }: { onNext: () => void }) {
   return (
     <View style={styles.stepCard}>
       <View style={[styles.iconCircle, { backgroundColor: "#EFF6FF" }]}>
-        <FontAwesome6 name="hands-helping" size={48} color="#3B82F6" />
+        <FontAwesome5 name="hands-helping" size={48} color="#3B82F6" />
       </View>
       <Text style={styles.title}>{t.welcome.title}</Text>
       <Text style={styles.subtitle}>{t.welcome.subtitle}</Text>
@@ -269,7 +269,7 @@ function SOSStep({
 
   return (
     <View style={styles.stepCard}>
-      <FontAwesome6 name="phone-alt" size={40} color="#EF4444" style={styles.stepIcon} />
+      <FontAwesome6 name="phone" size={40} color="#EF4444" style={styles.stepIcon} />
       <Text style={styles.title}>{t.sos.title}</Text>
       <Text style={styles.subtitle}>{t.sos.subtitle}</Text>
 
