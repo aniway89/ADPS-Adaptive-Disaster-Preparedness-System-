@@ -59,7 +59,7 @@ DisasterPrep is a mobile application built using **React Native and Expo** that 
 
 ## 📖 Documentation
 
-- 📘 Introduction → [`Docs/INTRODUCTION.md`](Docs/DisasterPrepDoc.docx)
+- 📘 DisasterPrepDoc → [`Docs/DisasterPrepDoc,docx`](Docs/DisasterPrepDoc.docx)
 - 📄 Full Documentation → https://disaster-prep-doc.netlify.app
 - 🧠 Technical Deep Dive → [`Docs/Everything Explained.md`](Docs/Everything%20Explained.md)
 - 🧠 Technical Deep Dive PDF → [`Docs/Everything Explained.md`](Docs/Everything%20Doc.pdf)
